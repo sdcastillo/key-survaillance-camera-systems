@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation and Setup Manual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Installation and Setup Manual</h1>
+
+    <h2>Welcome</h2>
+    <img src="assets/camera_recording.png" alt="Camera Recording">
+    <p>Action cameras are small, rugged devices designed to capture high-quality video and images in extreme conditions. They are often used for sports and adventure photography, featuring wide-angle lenses and robust waterproof and shockproof casings. Their compact size and durability make them ideal for capturing fast-paced and immersive footage.</p>
+    <ul>
+        <li>
+            <img src="assets/phone.png" alt="Smartphone Camera"> 
+            <strong>Smartphone cameras:</strong> Modern smartphones are equipped with highly advanced camera systems that rival dedicated cameras in many aspects. Smartphone cameras are convenient and always accessible, enabling users to capture high-quality images and videos on the go. They offer features like multiple lenses.
+        </li>
+    </ul>
+
+    <h2>Camera Types</h2>
+
+    <h3>Dome Cameras (Indoor)</h3>
+    <img src="assets/dome_cams.png" alt="Dome Cameras">
+    <p>Dome cameras are named for their dome-shaped housing, making them discreet and less noticeable. These cameras are typically mounted on ceilings or walls and offer a wide-angle view, ideal for monitoring large areas such as retail stores, offices, and warehouses.</p>
+
+    <h3>Bullet Cameras</h3>
+    <img src="assets/wall_cams.jpg" alt="Wall Mounted Bullet Cameras" height="300" width="300">
+    <p>Bullet cameras, also known as cylindrical cameras, are characterized by their long and tapered shape. They are often used outdoors due to their weatherproof design.</p>
+
+    <h3>PTZ Cameras</h3>
+    <img src="assets/poll_cams.jpg" alt="Pole Mounted PTZ Cameras">
+    <p>Pan-Tilt-Zoom (PTZ) cameras are highly versatile and capable of covering large areas with a single device. These cameras can pan, tilt, and zoom, allowing for comprehensive surveillance.</p>
+
+    <h3>Wireless Cameras</h3>
+    <p>Wireless cameras transmit video signals over Wi-Fi, eliminating the need for extensive cabling. They are easy to install and offer flexibility in placement.</p>
+
+    <h3>IP Cameras</h3>
+    <p>Internet Protocol (IP) cameras send and receive data over a network, enabling remote viewing and monitoring from anywhere with an internet connection. They offer high-resolution video and advanced features such as motion detection, video analytics, and cloud storage.</p>
+    
+    <p>Each type serves distinct security needs, ranging from home monitoring to business surveillance.</p>
+    <p>Basic operations such as powering on/off, using the viewfinder, and the LCD screen.</p>
+    <p><strong>ISO</strong> stands for International Organization for Standardization, indicating the camera's sensitivity to light. Utilize a low ISO in bright conditions and a high ISO in dim lighting.</p>
+    <p>Aperture refers to the opening in the camera lens through which light passes, measured in F-stops. A lower F-stop means more light is let in, while a higher F-stop is ideal for bright conditions and sharper focus.</p>
+    <p>A practical, step-by-step guide for camera installation teams working with Camect, ExacqVision and Avycon Systems. This manual covers essential procedures including system re-imaging, camera integration, remote viewing setup, troubleshooting, and advanced software features. Designed for technicians with hands-on experience, it delivers clear instructions, best practices, and quick-reference workflows to ensure reliable, professional surveillance deployments in any environment.</p>
+
+    <h1>Internet of Things</h1>
+    <img src="assets/flow.png" alt="IoT Flow Diagram">
+    <p>The <strong>Internet of Things (IoT)</strong> refers to the way everyday devices—like smart thermostats, security cameras, and even printers—are connected and able to communicate with each other. These smart devices collect and share data to make our lives easier, from automating routine tasks to personalizing our experiences, often without us having to lift a finger.</p>
+
+    <h2>All of this relies on strong connections</h2>
+    <p>Whether wired or wireless, think of the network as the backbone of IoT—a channel that lets devices talk to each other. In a typical office, for example, you'll find a WiFi network connecting laptops and computers, a separate network for printers, and remote connections that link different office locations together, making it feel like everyone's in the same room, even if they're miles apart.</p>
+    <p>Thanks to these networks, you can send a document from your computer to the printer with a click, or cast a presentation from your laptop to the conference room TV via Bluetooth, allowing everyone to share information instantly. Networks also act as a security barrier: people inside the office can access resources from the outside world, but outsiders can't easily reach sensitive information inside—much like looking through a one-way mirror.</p>
+
+    <h2>In short</h2>
+    <p>IoT and the networks that support it are what make our modern, connected lives possible, seamlessly linking people, devices, and information. Networks in IoT systems are designed with security in mind, using encryption and authentication to protect data and devices from unauthorized access. They also allow for centralized management, making it easier to monitor device health, update software, and enforce security policies.</p>
+
+    <h1 id="anchor-1">Network Fundamentals</h1>
+    <img src="assets/protocols.png" alt="Network Protocols Overview">
+
+    <p><strong>1. What Is a Network?</strong></p>
+    <ul>
+        <li>A network lets multiple devices share data (docs, e-mail, video) through switches or WLAN APs.</li>
+        <li>Protocol "languages" (Ethernet, TCP, HTTP, SMTP) set the rules for how hosts talk.</li>
+        <li>Mastering the basics is foundational for any IT or networking career.</li>
+    </ul>
+
+    <p><strong>2. Network Types & Scale</strong></p>
+    <ul>
+        <li><strong>SOHO → SMB → Enterprise</strong>: rising device count and infrastructure complexity.</li>
+        <li><strong>LAN</strong> (building-sized) vs <strong>WAN</strong> (connects LANs worldwide via service-provider backbones).</li>
+        <li>Switches, routers and APs remain the core building blocks at every scale.</li>
+    </ul>
+
+    <p><strong>3. The OSI 7-Layer Model</strong></p>
+    <img src="assets/tech_layers.png" alt="OSI 7-Layer Tech Model">
+    <p>The <strong>OSI (Open Systems Interconnection) 7-Layer Model</strong> is a framework that standardizes how devices communicate over a network by breaking the process into seven distinct layers. Each layer has a specific role, working with the layers above and below to ensure data flows smoothly from sender to receiver. Here's a simplified breakdown:</p>
+
+    <p><strong>The 7 Layers Explained</strong> <em>(From Bottom to Top)</em></p>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Layer</th>
+                <th>Key Role</th>
+                <th>Example Protocols/Technologies</th>
+            </tr>
+            <tr>
+                <td>1. Physical</td>
+                <td>Transmits raw bit streams (0s/1s) over physical media (cables, Wi-Fi)</td>
+                <td>Ethernet cables, Fiber optics, Wi-Fi</td>
+            </tr>
+            <tr>
+                <td>2. Data Link</td>
+                <td>Manages direct communication between devices on the same network. Adds MAC addresses and error checking.</td>
+                <td>Ethernet, MAC addresses, Switches</td>
+            </tr>
+            <tr>
+                <td>3. Network</td>
+                <td>Routes data between different networks using IP addresses.</td>
+                <td>IP (Internet Protocol), Routers</td>
+            </tr>
+            <tr>
+                <td>4. Transport</td>
+                <td>Ensures reliable end-to-end data delivery (error-checking, flow control).</td>
+                <td>TCP (reliable), UDP (fast/unreliable)</td>
+            </tr>
+            <tr>
+                <td>5. Session</td>
+                <td>Establishes, maintains, and terminates connections between applications.</td>
+                <td>NetBIOS, RPC</td>
+            </tr>
+            <tr>
+                <td>6. Presentation</td>
+                <td>Translates data into formats applications understand (encryption, compression).</td>
+                <td>SSL/TLS, JPEG, ASCII</td>
+            </tr>
+            <tr>
+                <td>7. Application</td>
+                <td>Provides interfaces for end-user applications (web browsers, email).</td>
+                <td>HTTP, FTP, SMTP</td>
+            </tr>
+        </table>
+    </div>
+
+    <p>Memorizing all the layers isn't important; understanding their existence is. A layer is a setup partition often discussed by IT, useful for detailed planning. Think of it like a biological environment: microscopic life at the smallest level, trees and flowers at the macroscopic level, and mountains and oceans at the largest level. "High-level" refers to non-technical explanations.</p>
+
+    <p><strong>How Layers Work Together</strong></p>
+    <ul>
+        <li><strong>Encapsulation:</strong> Data is wrapped with headers/trailers as it moves down the layers. For example:
+            <ul>
+                <li>A web request (HTTP) starts at Layer 7.</li>
+                <li>Transport Layer (TCP) adds a header with port numbers.</li>
+                <li>Network Layer (IP) adds source/destination IP addresses (Level 3)</li>
+                <li>Data Link Layer (Ethernet) adds MAC addresses (Level 2)</li>
+                <li>Physical Layer sends bits over cables/fiber (Level 1)</li>
+            </ul>
+        </li>
+        <li><strong>Example Stack:</strong> HTTP (Layer 7) → TCP (Layer 4) → IP (Layer 3) → Ethernet (Layer 2) → Cable/Fiber (Layer 1)</li>
+    </ul>
+
+    <p><strong>Key Concepts</strong></p>
+    <ol>
+        <li><strong>Layer Independence:</strong> Each layer only interacts with the layer directly above or below. For example, the Transport Layer (TCP) doesn't need to know if data is traveling over Ethernet or Wi-Fi.</li>
+        <li><strong>Headers/Trailers:</strong> Each layer adds its own metadata (e.g., IP headers for routing, TCP headers for ports).</li>
+        <li><strong>Real-World vs. OSI:</strong> Modern networks (like the internet) often combine layers. For instance, TCP/IP merges Layers 5–7 into a single "Application Layer."</li>
+    </ol>
+
+    <p><strong>Why This Matters</strong></p>
+    <ul>
+        <li><strong>Troubleshooting:</strong> If your web page won't load, you can isolate the issue:
+            <ul>
+                <li>No connection? Check Physical/Link layers (cables, Wi-Fi).</li>
+                <li>Can't reach a specific site? Check Network/Transport layers (IP/TCP).</li>
+            </ul>
+        </li>
+        <li><strong>Security:</strong> Encryption happens at the Presentation Layer (SSL/TLS), while firewalls operate at the Network/Transport layers.</li>
+    </ul>
+
+    <p><strong>4. IPv4 Addressing Basics</strong></p>
+    <ul>
+        <li>One 32-bit address = <strong>network ID + host ID</strong>.</li>
+        <li>Dotted-decimal (0-255 each octet) yields 4.29 billion possible addresses.</li>
+        <li>Subnet mask/CIDR bits separate the network from the host portion.</li>
+    </ul>
+
+    <p><strong>5. Subnetting, VLSM & Private Space</strong></p>
+    <ul>
+        <li>VLSM lets you carve variable-size subnets, conserving addresses.</li>
+        <li>RFC 1918 private ranges (10/8, 172.16/12, 192.168/16) stay internal; routers hide them with NAT.</li>
+        <li>Broadcast (255.255.255.255) floods a LAN; multicast (224.0.0.0/4) delivers one-to-many efficiently.</li>
+    </ul>
+
+    <p><strong>6. TCP/IP Model (4-Layer)</strong></p>
+    <ul>
+        <li>Link → Internet → Transport → Application (often shown with an optional Physical layer).</li>
+        <li>Protocol highlights: Ethernet/PPP (Link), IP (Internet), TCP/UDP (Transport), HTTP/SMTP/SSH/etc. (App).</li>
+    </ul>
+
+    <p><strong>7. TCP vs UDP</strong></p>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th></th>
+                <th>TCP</th>
+                <th>UDP</th>
+            </tr>
+            <tr>
+                <td>Connection</td>
+                <td>Oriented (three-way handshake)</td>
+                <td>Connectionless</td>
+            </tr>
+            <tr>
+                <td>Reliability</td>
+                <td>Sequencing, ACKs, retransmits</td>
+                <td>"Best effort"</td>
+            </tr>
+            <tr>
+                <td>Overhead</td>
+                <td>Higher</td>
+                <td>Minimal</td>
+            </tr>
+            <tr>
+                <td>Typical uses</td>
+                <td>File transfer, e-mail, web</td>
+                <td>Voice/video, DNS, games</td>
+            </tr>
+        </table>
+    </div>
+
+    <p><strong>8. TCP Handshakes & Flow Control</strong></p>
+    <ul>
+        <li><strong>3-way SYN → SYN-ACK → ACK</strong> starts a session; <strong>4-way FIN/ACK</strong> closes it.</li>
+        <li>Sequence numbers + sliding windows handle ordering, congestion & retransmissions.</li>
+    </ul>
+
+    <p><strong>9. More TCP Internals</strong></p>
+    <ul>
+        <li>Dynamic window sizing boosts throughput on clean links, shrinks on error.</li>
+        <li>Forward ACK tells sender the next expected segment for efficient recovery.</li>
+    </ul>
+
+    <p><strong>10. Cisco CLI Primer</strong></p>
+    <ul>
+        <li>Modes: <strong>User EXEC → Privileged EXEC → Global/Interface Config</strong>.</li>
+        <li>Secure remote access with SSH (hostname, domain, RSA keys, local user, line vty).</li>
+        <li>Always copy run start to persist changes.</li>
+    </ul>
+
+    <p><strong>11. Ethernet & Switching</strong></p>
+    <ul>
+        <li>48-bit MAC: 24-bit OUI + 24-bit device ID.</li>
+        <li>Switch forwarding methods: store-and-forward (safe), cut-through (fast), fragment-free (middle).</li>
+        <li>MAC-learning builds a CAM table; unknown frames flood, known frames forward/filter.</li>
+    </ul>
+
+    <p><strong>12. VLAN Fundamentals</strong></p>
+    <ul>
+        <li>VLAN = virtual LAN; isolates Layer-2 broadcast domains logically.</li>
+        <li>IDs 1-4094 (12-bit tag). Router or Layer-3 switch needed for inter-VLAN traffic.</li>
+    </ul>
+
+    <p><strong>13. VLAN Trunking</strong></p>
+    <ul>
+        <li>802.1Q tagging lets one link carry many VLANs.</li>
+        <li>Native VLAN sends frames untagged for legacy compatibility.</li>
+        <li><em>Router-on-a-Stick</em> uses one sub-interface per VLAN for routing.</li>
+    </ul>
+
+    <p><strong>14. Access Control Lists (ACLs)</strong></p>
+    <ul>
+        <li>Ordered rules match traffic; <strong>implicit deny</strong> at end.</li>
+        <li>Standard (source only) vs Extended (src/dst, protocol, port).</li>
+        <li>Wildcard masks (0 = match exact, 1 = "any") simplify IP ranges.</li>
+    </ul>
+
+    <p><strong>15. ARP Essentials</strong></p>
+    <ul>
+        <li>Broadcast "Who has IP X?" → unicast reply with MAC.</li>
+        <li>Entries live ~30 s in cache (can be flushed).</li>
+        <li>Variants: RARP (MAC→IP), GARP (gratuitous update).</li>
+    </ul>
+
+    <p><strong>16. DHCP in a Nutshell</strong></p>
+    <ul>
+        <li><strong>DORA</strong> cycle: Discover → Offer → Request → ACK.</li>
+        <li>Leases renew at T/2; options supply gateway, DNS, etc.</li>
+        <li>Relay agents forward client broadcasts across subnets.</li>
+    </ul>
+
+    <p><strong>17. DNS Basics</strong></p>
+    <ul>
+        <li>Zones hold records: <strong>A</strong>, <strong>AAAA</strong>, <strong>CNAME</strong>, <strong>MX</strong>, <strong>PTR</strong>.</li>
+        <li>Resolvers use recursion & root hints to find authoritative answers.</li>
+        <li>TTL controls cache lifetime; ipconfig /flushdns clears locally.</li>
+    </ul>
+
+    <p><strong>18. Static Routing (ip route)</strong></p>
+    <ul>
+        <li>Explicit destination/mask + next-hop or exit-interface.</li>
+        <li>0.0.0.0/0 = default route. Use permanent to keep entry despite link state.</li>
+    </ul>
+
+    <p><strong>19. RIP v2 Overview</strong></p>
+    <ul>
+        <li>Distance-vector; metric = hop count (max 15).</li>
+        <li>Split-horizon & route poisoning fight loops.</li>
+        <li>Timers: update 30 s, invalid/hold-down 180 s, flush 240 s.</li>
+    </ul>
+
+    <p><strong>20. Network Address Translation (NAT)</strong></p>
+    <ul>
+        <li><strong>Static</strong> 1:1, <strong>Dynamic</strong> pool, <strong>PAT/Overload</strong> many-to-one via port numbers.</li>
+        <li>Bidirectional NAT allows outside-initiated sessions if configured.</li>
+    </ul>
+
+    <p><strong>21. Time Synchronization (NTP)</strong></p>
+    <ul>
+        <li>NTP (UDP 123) hierarchies: stratum 0 atomic → 1 → 2 ...</li>
+        <li>ntp server &lt;ip-or-pool&gt; on Cisco; check with show ntp status.</li>
+    </ul>
+
+    <p><strong>22. Syslog Fundamentals</strong></p>
+    <ul>
+        <li>Message format = <em>facility</em>.<em>severity</em> (0 = emerg ... 7 = debug).</li>
+        <li>Mnemonic: <strong>E</strong>very <strong>A</strong>wesome <strong>C</strong>isco <strong>E</strong>ngineer <strong>W</strong>ill <strong>N</strong>eed <strong>I</strong>ce-cream <strong>D</strong>aily.</li>
+        <li>Central server aggregates logs; filter by severity to spot critical issues fast.</li>
+    </ul>
+
+    <p><strong>How to Use These Notes</strong></p>
+    <ol>
+        <li><strong>Skim before labs</strong> — know which layer/protocol to troubleshoot first.</li>
+        <li><strong>Make flashcards</strong> — e.g., "RIP max hops?" → <em>15</em>.</li>
+        <li><strong>Revisit after practice</strong> — add personal examples (configs, pings, Wireshark captures).</li>
+    </ol>
+
+    <h1 id="anchor-2">How to Re-Image an ExacqVision NVR</h1>
+    <img src="assets/NVR.jpg" alt="NVR Hardware" height="500" width="500">
+    <p>Imagine transforming your ExacqVision NVR back to its pristine factory state, ready to tackle new challenges or resolve stubborn software issues. Re-imaging your NVR is like hitting the reset button, giving it a fresh start. But remember, this process wipes out all existing data, so make sure to back up your important files before diving in. Let's get started on this exciting journey to restart your NVR!</p>
+
+    <p><strong>Step-by-Step Process</strong></p>
+    <ul>
+        <li>Power off the NVR and connect a monitor, keyboard, and mouse.</li>
+        <li>Insert the ExacqVision recovery USB drive or DVD.</li>
+        <li>Power on the NVR and enter the BIOS/boot menu (usually by pressing F12 or Esc).</li>
+        <li>Select the USB/DVD as the boot device.</li>
+        <li>Follow the on-screen prompts to start the imaging process.</li>
+        <li>Choose the correct image version as required.</li>
+        <li>Confirm that you wish to proceed, acknowledging that all data will be erased.</li>
+        <li>Wait for the process to complete; the NVR will reboot automatically.</li>
+        <li>Remove the USB/DVD and allow the system to boot into the ExacqVision OS.</li>
+        <li>Complete the initial setup, including network configuration and license activation.</li>
+        <li>Restore configuration and video backups as needed.</li>
+    </ul>
+
+    <h1 id="anchor-4">Adding a New Camera</h1>
+    <p>When performing a fresh installation we will add new cameras. The process is analogous to adding new controllers to an Xbox. This includes both the physical site and through the ExacqVision MAP. This setup allows for real-time monitoring, alarms, and AI detection provided by ExacqVision. Maintaining a consistent method for adding new devices will ensure a clean and easy-to-navigate final setup.</p>
+
+    <p><strong>Adding New Camera and Replacing Camera on ExacqVision Map</strong></p>
+    <ul>
+        <li>Open the ExacqVision Client and log in.</li>
+        <li>Navigate to the <em>Setup</em> tab.</li>
+        <li>Select the server, then go to the <em>IP Cameras</em> section.</li>
+        <li>Click <em>Add</em> and enter the camera's IP address, username, and password.</li>
+        <li>Ensure the camera shares the first three segments of its IP address with the server for successful integration.</li>
+        <li>Click <em>Apply</em> and verify the camera connects.</li>
+        <li>Go to the <em>Maps</em> section, select the desired map, and drag the new camera onto the map layout.</li>
+        <li>Save changes.</li>
+    </ul>
+
+    <h1 id="anchor-6">Replacing a Camera</h1>
+    <ul>
+        <li>Remove the old camera from the map by right-clicking and selecting <em>Remove</em>.</li>
+        <li>Add the new camera as described above.</li>
+        <li>Drag the new camera onto the map in the desired position.</li>
+        <li>Update camera labels and settings as needed.</li>
+        <li>Save the map layout.</li>
+    </ul>
+
+    <h1 id="anchor-7">Avycon NVR</h1>
+    <p><strong>Overview</strong></p>
+    <p>Re-imaging an Avycon NVR is used to restore factory settings or recover from system corruption. This process deletes all data.</p>
+
+    <p><strong>How to Use the Avycon CVMS Manual Alarm Triggers</strong></p>
+    <p>The Avycon CVMS 2.0 software enables manual control of alarm relay outputs for managing external devices such as lights and sirens, enhancing security and enabling real-time monitoring.</p>
+
+    <p><strong>Key Functions</strong></p>
+    <ul>
+        <li>Manually trigger alarm relay outputs to control external devices.</li>
+        <li>Customize triggers based on specific events or schedules.</li>
+        <li>Integrate with access control systems for enhanced entry monitoring.</li>
+        <li>Use intrusion detection for area monitoring.</li>
+        <li>Schedule alarm relay activation for local sirens or other devices.</li>
+    </ul>
+
+    <h2>Avycon CVMS 2.0: Playback, Backup, and Resource Management</h2>
+    <p><strong>Playback Footage in Sync</strong></p>
+    <ul>
+        <li>Select multiple cameras for synchronized playback.</li>
+        <li>Use the timeline to play back footage from the same time across selected cameras.</li>
+    </ul>
+
+    <p><strong>Backup Footage</strong></p>
+    <ul>
+        <li>Select the desired camera(s) and time range.</li>
+        <li>Click <em>Backup</em> and choose a local disk as the destination.</li>
+        <li>Confirm and monitor the backup progress.</li>
+    </ul>
+
+    <h1 id="anchor-11">Avycon Resource Management</h1>
+    <ul>
+        <li>Limit simultaneous playback sessions to avoid overloading the workstation.</li>
+        <li>Close unused streams and sessions when not needed.</li>
+    </ul>
+
+    <p><strong>Time Slice by Event and by Tag</strong></p>
+    <ul>
+        <li><em>By Event</em>: Filter footage by motion or alarm events.</li>
+        <li><em>By Tag</em>: Search video by user-created tags for quick retrieval.</li>
+    </ul>
+
+    <p><strong>Step-by-Step: Searching by Date, Camera, and Event</strong></p>
+    <ul>
+        <li>Open the <em>Playback</em> tab.</li>
+        <li>Select the camera(s) and date range.</li>
+        <li>Use the <em>Event</em> or <em>Tag</em> filters to narrow results.</li>
+        <li>Review the timeline for marked events.</li>
+        <li>Click on an event to play back the relevant footage.</li>
+    </ul>
+
+    <h1 id="anchor-12">Remote Viewing</h1>
+    <p><strong>How to Set Up an ExacqVision NVR for Remote Viewing</strong></p>
+    <ul>
+        <li>Connect the NVR to the network and ensure Internet access.</li>
+        <li>Open the ExacqVision Client and log in as admin.</li>
+        <li>Go to <em>System</em> &gt; <em>Network</em> settings.</li>
+        <li>Configure the NVR with a static IP address.</li>
+        <li>Set up port forwarding on the router for the required ExacqVision ports (default: 80, 443, 22609).</li>
+        <li>Register for Exacq cloud-hosted relay service for simplified remote access if available.</li>
+        <li>Test remote connectivity using the ExacqVision mobile or desktop client from an external network.</li>
+    </ul>
+
+    <p><strong>How to Set Up an Avycon NVR for Remote Viewing</strong></p>
+    <ul>
+        <li>Connect the NVR to the network and ensure it has Internet access.</li>
+        <li>Assign a static IP address to the NVR.</li>
+        <li>Set up port forwarding on the router for HTTP, RTSP, and client ports.</li>
+        <li>Enable P2P/Cloud access in the NVR's network settings if available.</li>
+        <li>Scan the QR code in the mobile app or enter the NVR's serial number.</li>
+        <li>Test remote viewing from an external device.</li>
+    </ul>
+
+    <p><strong>How to Troubleshoot an Avycon Camera Not Showing Up in NVR</strong></p>
+    <ul>
+        <li>Ensure the camera and NVR are on the same network segment.</li>
+        <li>Check the camera's power and network connections.</li>
+        <li>Use the Avycon camera search tool to find the camera's IP address.</li>
+        <li>Confirm the camera's IP address matches the NVR's subnet.</li>
+        <li>Check for IP conflicts.</li>
+        <li>Ensure the camera's firmware is up to date.</li>
+        <li>Add the camera manually using its IP address and credentials.</li>
+        <li>Reboot the camera and NVR if necessary.</li>
+    </ul>
+
+    <p><strong>How to Set the IP Address in an Avycon Camera</strong></p>
+    <ul>
+        <li>Connect the camera to the network and power it on.</li>
+        <li>Use the Avycon IP search tool or access the camera's web interface from a PC.</li>
+        <li>Log in with the default credentials.</li>
+        <li>Navigate to <em>Network Settings</em>.</li>
+        <li>Assign a static IP address that matches the NVR's subnet (first three segments should match).</li>
+        <li>Save and reboot the camera.</li>
+        <li>Verify connectivity by pinging the camera's IP address from a PC.</li>
+    </ul>
+
+    <h1 id="anchor-15">Camect Hub Installation & Configuration Guide</h1>
+    <img src="assets/installation overview.png" alt="Installation Overview">
+
+    <h2>1. Purpose & Scope</h2>
+    <p>This guide standardizes the installation and commissioning of Camect Smart Camera Hubs across Integrated Security Consultants (ISC) customer sites—ranging from K-12 campuses to high-throughput facilities such as the Coca-Cola bottling plant. It is written for field technicians who physically install cameras and bring new sites online. Follow these steps exactly to ensure reliable video capture, alerting, and Central Station integration.</p>
+    <p><strong>Important</strong>: ISC's reputation rests on zero-downtime security coverage. Deviations from this playbook require written approval from the Project Engineer of Record (PER).</p>
+
+    <h2>2. Pre-Installation Checklist</h2>
+    <ul>
+        <li>Confirm work order, camera schedule, and floor plans are in ServiceNow ticket.</li>
+        <li>Verify PoE switch ports, patch panels, and power outlets are live.</li>
+        <li>Obtain LAN IP range, DNS, gateway, and VLAN tags from customer IT.</li>
+        <li>Confirm outbound ports 443 (TCP) and 554 (TCP/UDP) are permitted to ISC NOC for Immix.</li>
+        <li>Record camera MAC addresses for asset tracking.</li>
+        <li>Have a laptop with Chrome/Edge, USB-C Ethernet adapter, and Cat-5e jumpers.</li>
+    </ul>
+
+    <h2>3. Unboxing & Power-Up</h2>
+    <ol>
+        <li>Mount the Camect Hub in the designated IDF/MDF rack shelf (leave 1 RU clearance).</li>
+        <li>Patch Cat-5e/6 from Hub <em>LAN 1</em> to the security VLAN switch port.</li>
+        <li>Connect the supplied 12 V DC adapter to conditioned power (UPS recommended).</li>
+        <li>Verify the LED ring illuminates solid blue within 30 s.
+            <ul>
+                <li>If the ring is dark, reseat power; press the side power button once to start a soft boot.</li>
+            </ul>
+        </li>
+    </ol>
+    <p><em>Trouble Tip: A flashing red ring indicates the hub cannot reach the internet—check VLAN ACLs.</em></p>
+
+    <h2>4. Commissioning & Authentication</h2>
+    <ol>
+        <li>On a technician laptop on the same VLAN, browse to home.camect.com → V2 portal.</li>
+        <li>Click Sign in with Google and use the site-specific ISC installer account (format isc.&lt;site-code&gt;@integratedsecuritycorp.com).
+            <ul>
+                <li>Using the federated Google method prevents repeated email verifications.</li>
+            </ul>
+        </li>
+        <li>Accept the Camect Terms & Policy → Add Hub.</li>
+        <li>The portal auto-discovers the Hub at 192.168.x.x. Select Activate.</li>
+        <li>Leave default consent check-boxes enabled <em>(auto-password, optimized settings, email alerts)</em> unless instructed by PER.</li>
+        <li>Rename the Hub following ISC naming schema: SITE-CODE_HUB-## (e.g., COKE-ATL_HUB-01).</li>
+    </ol>
+    <p><em>Note: Large campuses may use multiple hubs—record Asset ID sticker in ServiceNow.</em></p>
+
+    <h2>5. Network Configuration</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Setting</th>
+                <th>Value</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Hostname</td>
+                <td>Matches Hub name</td>
+                <td>Visible in DHCP & NMS.</td>
+            </tr>
+            <tr>
+                <td>Full Network Scan</td>
+                <td>Disabled</td>
+                <td>Prevents discovery of non-security IoT devices. Navigate ⚙️ Gear → Advanced → Scan local network — uncheck both boxes.</td>
+            </tr>
+            <tr>
+                <td>Static IP</td>
+                <td>Yes</td>
+                <td>Assign per cut-sheet; set DNS to customer internal resolver.</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>6. Adding Cameras</h2>
+    <h3>6.1 Auto-Discovery (Default)</h3>
+    <ul>
+        <li>After commissioning, the Hub scans for ONVIF/RTSP cameras on the security VLAN.</li>
+        <li>Review discovered list → Add only those matching the work order.</li>
+    </ul>
+
+    <h3>6.2 Manual RTSP URL</h3>
+    <p>Use when cameras are on separate subnets or require sub-stream selection.</p>
+    <code>rtsp://&lt;username&gt;:&lt;password&gt;@&lt;IP&gt;:554/1 # mainstream</code><br>
+    <code>rtsp://&lt;username&gt;:&lt;password&gt;@&lt;IP&gt;:554/2 # sub-stream</code>
+    <p>Steps: ⚙️ Gear → Cameras → Add Camera → Stream URL. Paste URL → Save. Test live view.</p>
+    <p><em>Tip: Click the ⚙️ icon under a camera name → Edit URL to switch streams without re-adding.</em></p>
+
+    <h2>7. Alert & Analytics Configuration</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Configuration</th>
+                <th>Navigation</th>
+            </tr>
+            <tr>
+                <td>Object Detection</td>
+                <td>Limit alerts to <em>person</em>, <em>vehicle</em>, <em>animal</em> as required by SOW.</td>
+                <td>⚙️ Gear → Alerts → Object List</td>
+            </tr>
+            <tr>
+                <td>Notification Channels</td>
+                <td>Email (installer), messaging (client), Camect App.</td>
+                <td>⚙️ Gear → Alerts → Send alerts by...</td>
+            </tr>
+            <tr>
+                <td>Disable Auto-Suppression</td>
+                <td>Required for 24 × 7 monitoring sites (schools).</td>
+                <td>Alerts → Advanced → Do not auto-suppress similar events</td>
+            </tr>
+            <tr>
+                <td>Areas of Interest & Ratings</td>
+                <td>Exclude sidewalks; enforce <em>no-loiter</em> zones.</td>
+                <td>Camera View → Draw Box → Rating</td>
+            </tr>
+            <tr>
+                <td>Time Constraints</td>
+                <td>Detect <em>package trucks</em> 07:00–18:00 only.</td>
+                <td>Alerts → Time Constraints</td>
+            </tr>
+            <tr>
+                <td>Loitering</td>
+                <td>Alert if person stationary &gt; 20 s near entrance.</td>
+                <td>Create <em>Thumbs-Down</em> rating (loitering=20 s)</td>
+            </tr>
+            <tr>
+                <td>Line Crossing</td>
+                <td>Trigger when vehicle crosses perimeter line → gate opens.</td>
+                <td>Camera View → Draw Red Line (double-click to flip)</td>
+            </tr>
+            <tr>
+                <td>Sensitivity Mode</td>
+                <td>Improve thermal/night cameras; expect more false positives.</td>
+                <td>Alerts → Sensitivity Mode (per camera)</td>
+            </tr>
+            <tr>
+                <td>Long-Distance Mode</td>
+                <td>Sporting fields, parking lots. Requires 4K camera & added CPU.</td>
+                <td>Alerts → Long Distance Mode</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>8. Clip Management & Evidence Export</h2>
+    <ol>
+        <li>Hover Bell 🔔 to view unacknowledged alerts; click a timestamp to jump in Timeline.</li>
+        <li>Drag brackets [ ] to set start/end → Download (MP4) or Share.</li>
+        <li>First-time share prompts Google Drive link creation—use the ISC service account.</li>
+        <li>Option: Summarized Video for condensed evidentiary review.</li>
+    </ol>
+
+    <h2>9. Immix Integration (Central Station)</h2>
+    <ol>
+        <li>Port-forward Hub WAN to 443 & 554 at customer firewall.</li>
+        <li>In Immix: Add Site → fill address, customer code.</li>
+        <li>Add Device → Type =Camect, WAN IP, Secure Port = 443, credentials (local Hub admin).</li>
+        <li>Auto-Configure Cameras—pull list from Hub.</li>
+        <li>Enable Alarms in Hub → Immix receives events; verify talk-down audio (press-to-talk &gt; 2 s).</li>
+    </ol>
+
+    <h2>10. Maintenance & Support</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Frequency</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Review resource usage bar</td>
+                <td>After adding each camera</td>
+                <td>Hub Dashboard</td>
+            </tr>
+            <tr>
+                <td>Submit bug report</td>
+                <td>As needed</td>
+                <td>⚙️ Gear → System → Report Bug (attach logs)</td>
+            </tr>
+            <tr>
+                <td>Firmware update</td>
+                <td>Quarterly release</td>
+                <td>ISC Change Control SOP 16-Q</td>
+            </tr>
+            <tr>
+                <td>Verify alert delivery to NOC</td>
+                <td>Post-install & monthly</td>
+                <td>Immix event log</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>11. Post-Installation QA Checklist</h2>
+    <img src="assets/test.png" alt="Testing and QA Check">
+    <ul>
+        <li>All cameras display live video in Camect UI.</li>
+        <li>Correct site & zone names appear in Immix.</li>
+        <li>Test <em>person</em> detection alert and verify email to noc@integratedsecuritycorp.com.</li>
+        <li>Download sample clip and confirm playback on technician laptop.</li>
+        <li>Asset tags entered in ServiceNow ticket & signed off by PER.</li>
+    </ul>
+
+    <h2>12. Troubleshooting Quick Reference</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Issue</th>
+                <th>Cause</th>
+                <th>Solution</th>
+            </tr>
+            <tr>
+                <td>Blue ring absent</td>
+                <td>No power or bad adapter</td>
+                <td>Check UPS outlet, press power button.</td>
+            </tr>
+            <tr>
+                <td>Hub not discovered</td>
+                <td>VLAN mismatch</td>
+                <td>Use laptop on same subnet; manually browse to Hub IP.</td>
+            </tr>
+            <tr>
+                <td>Excess false alerts</td>
+                <td>Sensitivity mode on</td>
+                <td>Disable per camera; review lighting.</td>
+            </tr>
+            <tr>
+                <td>Immix not receiving alarms</td>
+                <td>Port 443/554 blocked</td>
+                <td>Confirm NAT/ACL; test with telnet.</td>
+            </tr>
+            <tr>
+                <td>Talk-down one-way</td>
+                <td>Mic muted in Immix</td>
+                <td>Check PC audio permissions; verify Hub FW ≥ x.x.</td>
+            </tr>
+        </table>
+    </div>
+
+    <h1>KamTech Tutorials</h1>
+
+    <h2>Entrapass GoPass Mobile Credentials Training: Programming and Use</h2>
+    <p><strong>Mobile Access Setup</strong></p>
+    <p>🔑 EntraPass GoPass enables mobile credentials by requiring users to enter a passcode, select sites, and add doors to favorites for quick access.</p>
+    <p><strong>Card Holder Management</strong></p>
+    <p>👤 Adding new card holders in EntraPass GoPass involves inputting essential details like name, email, card type/number, end date, and assigning the appropriate access level.</p>
+    <p><strong>Application Activation</strong></p>
+    <p>📱 Activating EntraPass GoPass requires users to check for an activation email, download the app via the provided link, and use mobile credentials to complete the setup process.</p>
+
+    <h2>Replacing lithium battery on KT 1 controller</h2>
+    <p><strong>Battery Replacement Procedure</strong></p>
+    <p>🔧 To replace the lithium battery on a KT-1 controller, first remove it from the faceplate by gently pulling, then pinch the clamp at the end and gently push it out, repeating for all four clamps.</p>
+
+    <h2>Kantech Onboard Guide</h2>
+    <p><strong>Integration and Cost Savings</strong></p>
+    <p>🔗 Kantech EntraPass Corporate Edition integrates access control with video recording on exacqVision recorders, providing hardware, power, and cooling cost savings.</p>
+    <p><strong>Installation and Configuration</strong></p>
+    <p>🔑 To install, log into the restricted user account, then the administrator account (password: admin256) on the exacqVision recorder and follow the installation walkthrough.</p>
+    <p>🎯 Configure backup targets by launching the Workstation application, logging in with admin admin256, clicking Options &gt; Backup Scheduler, and changing the default location to a removable media or network share.</p>
+    <p><strong>Registration and Cleanup</strong></p>
+    <p>📋 Kantech certified technicians must perform the registration process by providing the system serial number to Kantech.</p>
+    <p>🗑️ After installation, delete the Interpass web icon and Interpass folder to free up over 1 GB of space on the exacqVision server.</p>
+
+    <h2>Kantech Access Control, exacqVision</h2>
+    <p><strong>Integration and Control</strong></p>
+    <p>🔐 2 integrates with Kantech Entrapass access control system, enabling users to control doors and locks directly from the live view page.</p>
+    <p>🕹️ Users can perform access control functions like arming, unlocking, disabling, bypassing, and activating through the live view page and camera links feature.</p>
+    <p><strong>Event Management and Visualization</strong></p>
+    <p>🔗 The event linking page allows users to associate access control inputs with events, triggering actions like video recording or notifications when device status changes.</p>
+    <p>🗺️ exacqVision's mapping function provides a clear visual representation of access control status, showing which entryways are triggered, unlocked, or armed.</p>
+    <p><strong>Configuration</strong></p>
+    <p>🔧 The add access control section in the configuration tree displays available functions, including relays, door locks, and readers, based on the connected access control device.</p>
+
+    <h2>Converting ioProx cards from 24 to 32 bits</h2>
+    <p><strong>Card Encoding and Compatibility</strong></p>
+    <p>🔐 ioProx cards are dual encoded with a 26-bit number and an extended family code for 32-bit compatibility, enabling flexible usage across different systems.</p>
+    <p><strong>Conversion Process</strong></p>
+    <p>🔄 To convert all cards to a specific 32-bit extended family code, navigate to Options &gt; Display Format, select 32-bit global card format, and choose Yes to create a backup and perform the conversion.</p>
+    <p>🔁 For auto-converting ioProx cards from 24-bit to 32-bit, select 32-bit global card format in Options &gt; Display Format, choose No to convert all cards, then Yes for auto-conversion, requiring an initial access denied swipe for each card.</p>
+    <p><strong>System Flexibility</strong></p>
+    <p>🔓 The dual encoding feature of ioProx cards allows for seamless transition between 26-bit and 32-bit systems without replacing existing cards.</p>
+    <p><strong>User Experience</strong></p>
+    <p>👤 During the auto-conversion process, users will experience a one-time access denied message, which is automatically corrected on the subsequent card swipe.</p>
+
+    <h2>Kantech email server</h2>
+    <p><strong>Configuration</strong></p>
+    <ol>
+        <li>🖥️ To configure a Kantech email server, gather essential SMTP server information including IP address, domain name, email port, sender, encryption, authentication, username, and password.</li>
+        <li>🔒 SmartLink must be installed and running to enable sending emails from triggers or reliance using the SmartLink email tab in the devices application.</li>
+    </ol>
+    <p><strong>Functionality</strong></p>
+    <ol>
+        <li>📊 Automatic report emails can be sent using the email reports tab in the devices application for Entry Pass and Corporate editions, while the Global edition uses a separate email reports tab.</li>
+        <li>🧪 Test the email server configuration by entering a valid email and test area, then clicking the test button to ensure proper setup and receive an "OK" confirmation message.</li>
+    </ol>
+
+    <h2>EntraPass IP communication Troubleshooting</h2>
+    <p><strong>Troubleshooting Process</strong></p>
+    <ol>
+        <li>🔍 Gather critical information including IP address, subnet, gateway, protocol, MAC address, and broadcast configuration to effectively diagnose and resolve IP communication issues.</li>
+        <li>🌐 Verify the enterprise gateway's communication status as the first step, which can reveal issues like "gateway not connected", "IP device disabled", or "failed to reach IP device".</li>
+    </ol>
+    <p><strong>Technical Checks</strong></p>
+    <ol>
+        <li>🖥️ Test TCP port 1802 using the telnet function from a laptop to determine if communication is possible and identify potential antivirus or firewall blockages.</li>
+        <li>🔄 If controllers communicate initially but then reboot and fail to reconnect, it likely indicates incorrect information programmed in "devices connection".</li>
+        <li>🏷️ Ping the controller's IP address before and after disconnecting it to identify potential IP conflicts if responses continue after disconnection.</li>
+    </ol>
+
+    <h2>12 things you may not know about EntraPass</h2>
+    <p><strong>Advanced Features</strong></p>
+    <ol>
+        <li>🔧 EntraPass offers a driver builder software for creating custom card drivers, accessible via Start &gt; All Programs &gt; Kantech Server &gt; Database Utility.</li>
+        <li>🔄 The software supports free upgrades to any build within the same version and provides self-extracting backups containing version and edition information.</li>
+    </ol>
+    <p><strong>Efficiency Tools</strong></p>
+    <ol>
+        <li>⌨️ Shortcut keys for quick access to various features are pre-built into EntraPass, viewable in the Help menu.</li>
+        <li>🖨️ A printer icon for card list printing and automatic time synchronization in Corporate and Global editions enhance user efficiency.</li>
+    </ol>
+    <p><strong>Maintenance and Support</strong></p>
+    <ol>
+        <li>🛠️ EntraPass includes a database utility tool for running scans, correcting mistakes, cleaning the database, and removing deleted items, alongside a how-to section with instructional videos in the Help menu.</li>
+    </ol>
+
+    <h2>Driver Builder</h2>
+    <h3>Card Driver Creation Process</h3>
+    <p>🔢 <strong>Driver Builder</strong> requires entering the <strong>exact card number</strong>, clicking "scan to match", and swiping the card to create a driver for a <strong>standard card</strong> or <strong>legacy controller</strong>.</p>
+    <p>🧮 The <strong>raw data</strong> from the card must be matched with its <strong>binary representation</strong> in Notepad, obtained by converting the <strong>card number</strong> and <strong>site code</strong> using the <strong>Windows calculator</strong>.</p>
+
+    <h3>Card Data Structure</h3>
+    <p>🃏 In the <strong>Wiegand format standard</strong>, the <strong>8-bit site code</strong> (hexadecimal for alpha characters) is displayed on the left, while the <strong>16-bit card number</strong> (binary) is on the right.</p>
+
+    <h3>Legacy Controller Support</h3>
+    <p>🏛️ <strong>Driver Builder</strong> supports creating drivers for <strong>legacy controllers</strong> by selecting the appropriate option and following a similar process to standard card driver creation.</p>
+
+    <h2>ioSmart 485</h2>
+    <p><strong>Reader Capabilities</strong></p>
+    <p>🔖 ioSmart card readers can read 6 card types, while multi-technology readers support 9 card types, including additional 125 kHz formats.</p>
+    <p><strong>Connectivity and Installation</strong></p>
+    <p>🔌 ioSmart readers connect to controller's D0 and D1 terminals and can be wired in daisy chain or star pattern configurations.</p>
+    <p><strong>Configuration and Management</strong></p>
+    <p>🖥️ Reader serial numbers can be retrieved through the operation controller or devices controller interfaces, enabling easy identification and management.</p>
+    <p><strong>Input/Output Flexibility</strong></p>
+    <p>🔧 ioSmart readers offer configurable inputs and outputs, including LED inputs, lock outputs, and open collector relay outputs, with up to 750 mA capacity for relay/lock outputs.</p>
+    <p><strong>Advanced Features</strong></p>
+    <p>⌨️ ioSmart readers can include an optional keypad, with the ability to define inputs and outputs directly from the reader interface.</p>
+
+    <h2>KT 1 standalone</h2>
+    <p><strong>Security and Configuration</strong></p>
+    <p>🔐 The KT-1 requires firmware version 2.0.14 or above for standalone mode and demands encrypted installer or operator login creation, which cannot be reset, emphasizing the importance of password retention.</p>
+    <p>🛠️ Standalone mode allows selection of two card formats from 31 built-in drivers, adjustment of PIN digits (4-6), and entry of I/O smart serial number for communication setup.</p>
+    <p><strong>Functionality and Integration</strong></p>
+    <p>🚪 Users can configure doors, set specific daily/weekly/monthly/annual actions, and integrate with alarm systems using keys exclusive to the door tab.</p>
+    <p><strong>Data Management</strong></p>
+    <p>💾 The system prompts for automatic backup of card and schedule information, which is strongly recommended for data preservation and programming purposes.</p>
+    <p><strong>Activation Process</strong></p>
+    <p>📋 Customer and installer information must be entered to activate the KT-1, either through the web configuration page, Kantech website, or by contacting technical support.</p>
+
+    <h2>ioSmart Wiegand</h2>
+    <p><strong>Reader Compatibility</strong></p>
+    <p>🔑 IoSmart reader supports multiple card technologies including io smart, Mifare plus, SSF, can tech, and Mifare classic, while Multi tech reader adds compatibility for HID 125 kHz and Tak io procs cards.</p>
+    <p><strong>Configuration</strong></p>
+    <p>🔧 When connecting a reader for the first time, select the output format using beep codes: 3 beeps for SSF, 2 for XSF, 1 for 26 bit, and 34 bits for 34 bit format.</p>
+    <p><strong>Data Processing</strong></p>
+    <p>🔒 Multi tech readers send raw HID data to the controller for decryption, requiring the correct reader type to be selected under devices controller for proper functionality.</p>
+
+    <h2>Factory Defaulting Intevo</h2>
+    <p><strong>Factory Default Process</strong></p>
+    <ol>
+        <li>🔄 To factory default an Intevo unit, press F8 repeatedly during startup until reaching the "Repair Your Computer" page, then enter the restoration password "1-2-3-4-5" to initiate the recovery process.</li>
+        <li>💾 Before defaulting, backup critical data including archives, video events, and client version information using the Exact Vision Client's Backup Scheduler.</li>
+    </ol>
+    <p><strong>System Configuration</strong></p>
+    <ol>
+        <li>🖥️ After defaulting, reconfigure the unit by selecting language, accepting licensing, setting computer name, time zone, and entering static IP addresses for each Ethernet adapter in the First Boot Wizard.</li>
+    </ol>
+    <p><strong>Post-Default Steps</strong></p>
+    <ol>
+        <li>🔍 Verify and upgrade if necessary the versions of H DVR (or Exact Vision) and Entry Pass after completing the factory default process.</li>
+        <li>🔒 Record essential information before defaulting, including computer name, workgroup/domain, and IP information for both Ethernet adapters using ipconfig /all command.</li>
+    </ol>
+
+    <h2>Basics of Access Control</h2>
+    <p><strong>Core Components</strong></p>
+    <p>🔐 Access control systems comprise five key elements: an access controller, reader/keypad, door contact, door strike/magnetic lock, and request to exit unit.</p>
+    <p>🧠 The access controller acts as the system's brain, continuously monitoring door status and granting access based on programmed credentials.</p>
+    <p><strong>Functionality</strong></p>
+    <p>🚪 Door strikes or magnetic locks physically secure entrances, releasing only when the controller grants access.</p>
+    <p>👋 Request to exit units, utilizing motion infrared detectors or manual buttons, allow credential-free egress from controlled areas.</p>
+    <p><strong>Security Mechanism</strong></p>
+    <p>🔢 Access controllers use decryption templates to translate binary reader data into card numbers, granting entry if the decryption matches the card's encryption.</p>
+
+    <h2>How to blank the database for Special, Corporate or Global Edition</h2>
+    <p><strong>Database Management</strong></p>
+    <ol>
+        <li>🗑️ To blank the database for EntraPass Special, Corporate, or Global Editions, delete all files in the "C:\Program Files x86\Kantech\Server SE/CE/G\Data" folder and replace them with files from the "Server uncore C\Data SRC" folder.</li>
+        <li>🔄 This process applies to all Editions and versions of EntraPass, providing a universal solution for database reset across different software variants.</li>
+    </ol>
+    <p><strong>Troubleshooting</strong></p>
+    <ol>
+        <li>🛠️ Blanking the database is a crucial troubleshooting step when facing database corruption or when customers are locked out of the system, offering a clean slate for system recovery.</li>
+    </ol>
+    <p><strong>Software Specifics</strong></p>
+    <ol>
+        <li>🔒 The instructions are specific to Kantech's EntraPass software and its Server SE/CE/G versions, highlighting the importance of following manufacturer-specific guidelines for security management systems.</li>
+    </ol>
+    <p><strong>Post-Reset Procedure</strong></p>
+    <ol>
+        <li>🖥️ After blanking the database, users must close the folder and restart the EntraPass software to access the system with the newly created blank database, ensuring proper initialization of the reset environment.</li>
+    </ol>
+
+    <h2>How to integrate a Neo panel to a KT-400 or KT-1 with version 4 communicator</h2>
+    <h3>Integration Requirements and Setup</h3>
+    <p>🔧 <strong>Minimum firmware versions</strong> required: KT-400 (1.17 rev 1 or 1.23+), KT-1 (1.03+), Neo panel (1.10+), and TL-28R module (4.10+) for successful integration.</p>
+    <p>🔌 Hardware connection involves linking the <strong>Neo panel to TL-28R module via Ethernet</strong>, which then communicates with KT-400/KT-1 over Ethernet network.</p>
+
+    <h3>Programming and Configuration</h3>
+    <p>🖥️ Program Neo panel by accessing <strong>subsection 382</strong>, selecting option 5 for alternate communications, and ensuring "yes" is selected.</p>
+    <p>🌐 Configure TL-28R module's IP address in Neo panel by activating numbers 3 and 5 in <strong>subsection 851 and 663</strong>, then entering KT-400/KT-1's static IP in subsection 693.</p>
+
+    <h3>Functionality</h3>
+    <p>🔐 Enable <strong>arm/disarm from door</strong> by selecting door in Entrapass, enabling multi-swipe, choosing double-swipe action for arm/disarm, and selecting partition to control.</p>
+
+    <h2>How to factory default a KT-400</h2>
+    <p><strong>Factory Default Process</strong></p>
+    <ol>
+        <li>🔄 To factory default a KT-400 to DHCP: remove jumpers JP 2 and JP 3, press reset button for 5 seconds, wait for heartbeat LED to go solid then flash.</li>
+        <li>🔒 For static IP factory default: keep only jumper JP 2 on, press reset button for 5 seconds, observe heartbeat LED flashing with 3 long pulses twice.</li>
+    </ol>
+    <p><strong>Post-Reset Configuration</strong></p>
+    <ol>
+        <li>🔌 After factory defaulting to static IP, replace jumper JP 3 before saving configuration to prevent reverting to static IP.</li>
+    </ol>
+    <p><strong>LED Indicators</strong></p>
+    <ol>
+        <li>💡 Heartbeat LED behavior during reset: goes solid temporarily, then flashes to indicate process completion.</li>
+    </ol>
+    <p><strong>Reset vs. Factory Default</strong></p>
+    <ol>
+        <li>🔁 Reset process for both DHCP and static IP is identical to factory default procedure for respective configurations.</li>
+    </ol>
+
+    <h2>How to create and manage access levels</h2>
+    <h3>Access Management</h3>
+    <p>🔑 <strong>Create new access levels</strong> by selecting schedules for each door, allowing granular control over <strong>user access rights</strong> across different areas of a facility.</p>
+    <p>🔄 <strong>Modify access level schedules</strong> in the "definition schedule" section to update access rights for all associated doors simultaneously, streamlining <strong>security management</strong>.</p>
+    <h3>Card Administration</h3>
+    <p>💳 <strong>Add new cards</strong> to the system by assigning them names, card numbers, and specific access levels, enabling <strong>customized user permissions</strong>.</p>
+    <p>🚪 <strong>Swipe cards at readers</strong> to test functionality and receive status messages, including "<strong>access denied card unknown</strong>" for unregistered cards.</p>
+    <h3>Efficient User Management</h3>
+    <p>👤 <strong>Quickly add new users</strong> by right-clicking on access denial events and selecting "edit" then "card," automatically populating the card number field for <strong>streamlined onboarding</strong>.</p>
+
+    <h2>How to create and manage holidays</h2>
+    <p><strong>Holiday Management</strong></p>
+    <ol>
+        <li>📅 Create holidays in Enterp Pass software by navigating to Definition &gt; Holiday, entering name and date, selecting recurring option, and choosing holiday type for different schedules.</li>
+        <li>🔄 Selective holidays can be applied to specific sites or connections, while recurring holidays automatically repeat annually on the same date.</li>
+    </ol>
+    <p><strong>Schedule Integration</strong></p>
+    <ol>
+        <li>🗓️ Create holiday schedules by going to Definition &gt; Schedule, applying different schedules to various holiday types and dates.</li>
+        <li>🚪 Test holiday-schedule relationships by defining a holiday and checking the operation door to observe schedule effects.</li>
+    </ol>
+    <p><strong>System Indicators</strong></p>
+    <ol>
+        <li>🔍 Detect active holidays in the system by looking for an orange dot in the bottom left corner, which displays "Holiday detected" on mouseover.</li>
+    </ol>
+
+    <h2>Creating Backups in Corporate and Global Edition</h2>
+    <p><strong>Backup Management</strong></p>
+    <ol>
+        <li>🔄 Entrapass Corporate and Global Edition offers flexible backup options including data, archive, In-N-Out, and video types, with customizable frequency settings (now, weekly, monthly, daily) and location choices (default or specific folder).</li>
+        <li>🗂️ The system supports nested backups, allowing users to create backups within backups for enhanced data organization and security.</li>
+    </ol>
+    <p><strong>Restoration Process</strong></p>
+    <ol>
+        <li>🔙 Restoring backups is streamlined through the Server &gt; Backup &gt; Restore Data path, with a simple folder selection process and automatic event generation upon successful restoration.</li>
+    </ol>
+    <p><strong>System Features</strong></p>
+    <ol>
+        <li>📁 Default backups are stored in C:\Program Files\Program Files x86\Contact Ser_CE\Backup with folders named using a "D" prefix followed by date and time.</li>
+        <li>📊 The platform provides real-time event generation for backup and restore processes, ensuring users are informed of progress and potential issues throughout the operation.</li>
+    </ol>
+
+    <h2>Creating a KT-400 IP site</h2>
+    <p><strong>Network Configuration</strong></p>
+    <p>🌐 KT-400 IP site setup requires selecting a corporate Gateway, specifying the number of controllers, and choosing between "secure IP kt4 100" for KT-400 or "secure IP IP Link" for IP Link as the connection type.</p>
+    <p>🖧 For non-DHCP configurations, enter a private IP address with subnet, mask, and gateway, then select either TCP or UDP protocol and specify the communication port.</p>
+
+    <h2>Installing a Remote Workstation</h2>
+    <p><strong>Installation Requirements</strong></p>
+    <p>🔑 Remote workstations require additional licenses beyond the 2 included in Global Edition and 4 in Corporate Edition of KC Entropass software.</p>
+    <p>🖥️ The remote workstation must be the exact same version as the server, with firewall exceptions for TCP ports 18000, 18112, and 18101 on both machines.</p>
+    <p><strong>Setup Process</strong></p>
+    <p>🔢 Before installation, select the workstation in the registration window and note the workstation installation code for use during setup.</p>
+    <p>🔗 After installation, register the workstation to the server using the server's TCP/IP address or domain name, authentication password (default: canch), and workstation installation code.</p>
+    <p><strong>Access and Operation</strong></p>
+    <p>🔐 To access the remote workstation, click the login button and enter username and password when the workstation is running.</p>
+
+    <h2>Hard resetting a KT-400 or IP-Link</h2>
+    <p><strong>Hardware Reset Procedures</strong></p>
+    <p>🔧 Hard resetting a KT-400 requires removing JP2 and JP3, pressing reset for 2 seconds, waiting for heartbeat blinking, replacing AP2, and repeating reset process.</p>
+    <p>🔌 To default an IP-Link, place jumpers between PGM1-I1 and PGM2-I2, wait for rapid heartbeat flash followed by solid light, then remove jumpers.</p>
+    <p><strong>Network Configuration</strong></p>
+    <p>🌐 KT-400's default IP is 192.168.1.2, with laptop configured to 192.168.1.3 for setup.</p>
+    <p>⚙️ Configuring KT-400 involves entering server IP/domain, disabling DHCP if unused, setting local IP, subnet mask, gateway IP, DNS, and selecting UDP/TCP protocol and port.</p>
+
+    <h2>Define a new card in Special Edition</h2>
+    <p><strong>Card Management</strong></p>
+    <p>🔑 Special Edition software allows adding new cards via the "user card" menu by entering a card number or swiping the card to generate an "access denied" event.</p>
+    <p>📸 Right-clicking on a card enables adding a picture from file, which will display when the card accesses a door.</p>
+    <p><strong>Access Control</strong></p>
+    <p>🔐 The "access level" setting determines card privileges, ranging from "none" (no access) to "always valid" (24/7 access to all doors).</p>
+    <p>🗓️ Setting a "card expiration date" automatically deletes the card on the specified date, while changing the "card state" to "expired" deletes it immediately.</p>
+
+    <h2>How to send email notifications for EntraPass events</h2>
+    <p><strong>Email Notification Setup</strong></p>
+    <p>🔧 Ensure Smart Link is running and communicating with the server, and the email server doesn't require authentication or face antivirus blocking.</p>
+    <p>📧 Create an email task in the Definition Task Builder for Smart Link, specifying from address, subject, and body with event text, date, and time in a specific format.</p>
+    <p><strong>Event Triggering</strong></p>
+    <p>🔔 Configure the event trigger by linking it to a specific event, selecting the door component, and specifying either a single door or trigger group.</p>
+    <p><strong>Troubleshooting</strong></p>
+    <p>🔍 Check system and operator logs for concurrent login and Smart Link transactions to verify successful email sending.</p>
+    <p>📊 Validate email sending by reviewing the Smart Link transaction list for successful sends and confirming receipt in the recipient's email account.</p>
+
+    <h2>How to configure alarms and sounds on door forced open in EntraPass</h2>
+    <img src="assets/alarm_steps.png" alt="Alarm Configuration Steps">
+    <p><strong>Alarm Configuration Process</strong></p>
+    <ol>
+        <li>🔧 Configure alarms for door forced open events in EntraPass through 5 key steps: system event parameter, system instruction, multimedia device sound, alarm desktop setup, and workstation alarm settings verification.</li>
+        <li>🚪 The "door first open" event is selected under "enterprise events" in the event parameter, linked to a specific door and instruction, with an alarm sound assigned higher priority and a specific wave file.</li>
+    </ol>
+    <p><strong>Alarm Desktop Setup</strong></p>
+    <ol>
+        <li>🖥️ Set up the alarm desktop by right-clicking, selecting properties, relabeling as "alarm desktop", and configuring it to display both event and message screens.</li>
+    </ol>
+    <p><strong>Alarm Settings and Behavior</strong></p>
+    <ol>
+        <li>⏱️ Verify alarm settings for workstations, assigning higher priority alarm sounds with specific wave files, and set acknowledgment system delay to 1 minute and suspend delay to 1-60 minutes.</li>
+        <li>🔔 Generate an alarm by selecting the "door first open" event, choosing a specific door and workstation, selecting an instruction, and saving, with the alarm sound continuing until acknowledged.</li>
+    </ol>
+
+    <h2>Different ways to add a card in EntraPass and getting a card list</h2>
+    <p><strong>Card Management Techniques</strong></p>
+    <ol>
+        <li>🔑 EntraPass offers four methods to add cards: user card menu, desktop events, batch load operation, and CSV file import, with communication to the controller being crucial for card download.</li>
+        <li>📊 The batch load operation allows for efficient addition of multiple cards simultaneously, though initially without assigned access levels or times.</li>
+    </ol>
+    <p><strong>Access Control Features</strong></p>
+    <ol>
+        <li>🕒 Cards can be configured with expiration dates and automatic deletion, enhancing security for temporary access scenarios like visitor management.</li>
+        <li>🚪 When adding cards, users can specify card types (e.g., "security"), access levels (e.g., "visitor"), and time restrictions (e.g., 8am-4pm Mon-Wed) for granular access control.</li>
+    </ol>
+    <p><strong>System Management and Auditing</strong></p>
+    <ol>
+        <li>📋 EntraPass enables generation of a comprehensive user list including card numbers and access levels, exportable as a CSV file for auditing purposes.</li>
+        <li>🔢 The system supports both 26-bit and 32-bit card number formats, maintaining consistency in side code and corner loop across formats.</li>
+    </ol>
+
+    <h2>Import CSV file in EntraPass Corporate</h2>
+    <p><strong>CSV Import Process</strong></p>
+    <ol>
+        <li>📊 The CSV import/export feature in EntraPass Corporate allows importing or exporting card files saved in CSV format, enabling data sharing between applications like Excel or Notepad.</li>
+        <li>🔢 When importing a CSV file, each field must contain a specific value format with predefined or custom patterns that include card access group, card type fields, and must identify which column contains access levels.</li>
+    </ol>
+    <p><strong>Data Validation and Formatting</strong></p>
+    <ol>
+        <li>🔐 The card type must be validated first, followed by the card access group and access level, and schedules must be created using military time format (e.g., 0800 to 1700 hours).</li>
+        <li>📅 Up to ten fields of card information can be imported, including start date, card status, PINs, and other relevant data.</li>
+    </ol>
+    <p><strong>File Preparation</strong></p>
+    <ol>
+        <li>💾 The CSV file must be saved as a comma-separated value file, with the file path located and selected in the EntraPass software, matching the format of the predefined or custom pattern used.</li>
+    </ol>
+
+    <h2>Elevator setup with KT-400</h2>
+    <h3>Elevator Control Setup</h3>
+    <p>🛗 <strong>KT-400</strong> requires either <strong>two KT module RL8</strong> or <strong>one KT module output 16</strong> for elevator control, with <strong>additional 12V 1A power supply</strong> needed if SPI module draws over <strong>500mA</strong>.</p>
+    <p>🏢 <strong>Maximum cab flow</strong> is <strong>64 floors</strong> with module RL8 and <strong>4 connected</strong> with output 16, while <strong>max cabs per controller</strong> are <strong>32</strong> (RL8) or <strong>16</strong> (output 16).</p>
+    <h3>Software Configuration</h3>
+    <p>🖥️ In <strong>EntraPass software</strong>, define modules as elevator equipment under <strong>Devices Controller &gt; Gateway &gt; Controller &gt; Kit Number &gt; Package 400 tab</strong>, specifying <strong>door numbers</strong> and <strong>relay outputs</strong> for each cab.</p>
+    <p>🔓 <strong>Unlock schedules</strong> for floor groups are set in the <strong>Elevator tab</strong>, allowing access to specific floors based on predefined time periods.</p>
+    <h3>Access Control</h3>
+    <p>🔑 User access to floor groups is managed by creating <strong>new access levels</strong> in the <strong>Users &gt; Edit Card</strong> section, enabling controlled elevator usage based on individual permissions and schedules.</p>
+
+    <h2>How to install USB-485</h2>
+    <p><strong>Installation and Configuration</strong></p>
+    <ol>
+        <li>🔌 Connect the USB-485 adapter to the KT 400 controller by linking x-, x+, and ground pins, then install the driver by updating it in the device manager using the provided installation package.</li>
+        <li>🖥️ The USB-485 adapter appears as a COM port in Windows device manager, which must be selected in the software to establish communication with the KT 400 controller.</li>
+    </ol>
+    <p><strong>Software Setup</strong></p>
+    <ol>
+        <li>🛠️ Configure the KT 400 controller in the Enterprise Special Edition software by defining the site, selecting direct RS232 or USB connection, and choosing the correct COM port.</li>
+        <li>🔑 Define a card in the software by entering the card number detected by the driver when swiped, and assign an access level to grant permissions.</li>
+    </ol>
+    <p><strong>Testing and Functionality</strong></p>
+    <ol>
+        <li>🚪 Test the system by swiping the card at the door or using the Rex button to verify proper unlocking and access granting functionality.</li>
+    </ol>
+
+    <hr>
+
+    <h1>Chapter: Gentec Vendor Training -- CCTV, Security, and Alarm Systems</h1>
+    <p><strong>Overview of Gentec</strong></p>
+    <p>Gentec is a leading provider of advanced security and surveillance solutions, recognized for its innovative products in video surveillance, access control, and alarm management. Gentec's product suite is widely used in commercial, industrial, and institutional environments, offering scalable and integrated security platforms designed to protect people, property, and data.</p>
+
+    <p><strong>Key Gentec Product Lines</strong></p>
+    <ul>
+        <li><strong>Genetec Security Center</strong>: A unified security platform that integrates video surveillance, access control, and automatic license plate recognition (ALPR).</li>
+        <li><strong>Omnicast</strong>: An IP-based video management system (VMS) for surveillance cameras.</li>
+        <li><strong>Synergis</strong>: An IP access control system.</li>
+        <li><strong>AutoVu</strong>: Automated license plate recognition (ALPR) solution.</li>
+        <li><strong>Genetec Streamvault</strong>: Security appliances and servers optimized for Genetec software.</li>
+        <li><strong>Genetec Mission Control</strong>: Decision management system for incident response.</li>
+        <li><strong>Genetec Clearance</strong>: Digital evidence management platform.</li>
+    </ul>
+
+    <h2>CCTV and Video Surveillance Systems</h2>
+    <p><strong>Omnicast -- Video Management System</strong></p>
+    <p><strong>Omnicast</strong> is Gentec's flagship VMS, supporting a wide range of IP cameras from various manufacturers. Key features include:</p>
+    <ul>
+        <li>Centralized management of live and recorded video.</li>
+        <li>Advanced video analytics (motion detection, people counting, intrusion detection).</li>
+        <li>Scalability from small sites to enterprise deployments.</li>
+        <li>Redundant recording and failover support for maximum uptime.</li>
+        <li>Integration with access control and alarm systems.</li>
+    </ul>
+
+    <h2>Access Control Systems</h2>
+    <p><strong>Synergis -- IP-Based Access Control</strong></p>
+    <p><strong>Synergis</strong> offers a flexible and scalable access control solution:</p>
+    <ul>
+        <li>Supports a wide range of hardware controllers and readers.</li>
+        <li>Real-time monitoring of door status and cardholder activity.</li>
+        <li>Integration with Omnicast for video verification of access events.</li>
+        <li>Advanced credential management and visitor management modules.</li>
+    </ul>
+
+    <h2>Alarm and Intrusion Detection</h2>
+    <p>Gentec's Security Center platform allows for unified alarm management:</p>
+    <ul>
+        <li>Alarm monitoring from video, access, and external intrusion systems.</li>
+        <li>Customizable alarm rules and escalation procedures.</li>
+        <li>Integration with third-party alarm panels and sensors.</li>
+        <li>Automated event responses, such as camera pop-ups or door lockdowns.</li>
+    </ul>
+
+    <h2>Automated License Plate Recognition (ALPR)</h2>
+    <p><strong>AutoVu -- ALPR Solution</strong></p>
+    <p><strong>AutoVu</strong> enables automated detection and logging of vehicle license plates:</p>
+    <ul>
+        <li>Fixed and mobile ALPR camera options.</li>
+        <li>Real-time plate matching against watchlists.</li>
+        <li>Integration with parking management and law enforcement databases.</li>
+        <li>Automated alerts for suspect or unauthorized vehicles.</li>
+    </ul>
+
+    <h2>Unified Security Platform: Security Center</h2>
+    <p><strong>Genetec Security Center</strong> brings together all Gentec systems into a single interface:</p>
+    <ul>
+        <li>Unified monitoring and management of video, access, ALPR, and alarms.</li>
+        <li>Customizable dashboards and reporting tools.</li>
+        <li>Role-based access and multi-site management.</li>
+        <li>Open architecture for integration with third-party systems.</li>
+    </ul>
+
+    <h2>Popular Gentec Products Summary Table</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <th>Function</th>
+                <th>Key Features</th>
+            </tr>
+            <tr>
+                <td>Security Center</td>
+                <td>Unified security platform</td>
+                <td>Video, access, ALPR, alarms integration</td>
+            </tr>
+            <tr>
+                <td>Omnicast</td>
+                <td>Video management system (VMS)</td>
+                <td>Multi-brand IP camera support, analytics</td>
+            </tr>
+            <tr>
+                <td>Synergis</td>
+                <td>IP access control</td>
+                <td>Real-time monitoring, credential management</td>
+            </tr>
+            <tr>
+                <td>AutoVu</td>
+                <td>ALPR system</td>
+                <td>Fixed/mobile cameras, watchlist integration</td>
+            </tr>
+            <tr>
+                <td>Streamvault</td>
+                <td>Security appliances/servers</td>
+                <td>Optimized for Genetec software</td>
+            </tr>
+            <tr>
+                <td>Mission Control</td>
+                <td>Incident management</td>
+                <td>Automated workflows, response coordination</td>
+            </tr>
+            <tr>
+                <td>Clearance</td>
+                <td>Digital evidence management</td>
+                <td>Secure sharing, case management</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h1>Chapter: Avigilon Vendor Training -- Newest CCTV, Security, and Surveillance Products</h1>
+    <p><strong>Overview of Avigilon</strong></p>
+    <p>Avigilon, a Motorola Solutions company, is renowned for its advanced security and surveillance technologies. The company focuses on delivering high-definition video, AI-powered analytics, and unified security platforms for enterprise, commercial, and public sector environments.</p>
+
+    <p><strong>Newest Avigilon Product Lines</strong></p>
+    <ul>
+        <li><strong>Avigilon Unity Platform</strong>: A unified security platform integrating video, access control, and analytics.</li>
+        <li><strong>H6A and H6X Camera Series</strong>: Next-generation AI-enabled cameras with advanced video analytics.</li>
+        <li><strong>Avigilon Alta (formerly Ava Security)</strong>: Cloud-native video security and access control solutions.</li>
+        <li><strong>Avigilon Appearance Search™</strong>: AI-powered search technology for rapid identification and tracking.</li>
+        <li><strong>Avigilon Control Center (ACC) 8</strong>: The latest version of Avigilon's flagship video management software.</li>
+        <li><strong>Avigilon Video Intercom</strong>: Touchscreen intercom with integrated video analytics.</li>
+        <li><strong>Avigilon Radio Alert</strong>: Integration of video analytics with radio communications for instant notifications.</li>
+    </ul>
+
+    <h2>CCTV and Video Surveillance Systems</h2>
+    <p><strong>H6A and H6X Camera Series</strong></p>
+    <ul>
+        <li><strong>Resolutions up to 4K and 8K</strong> for detailed video capture.</li>
+        <li><strong>Next-generation analytics</strong> including unusual activity detection, facial recognition, and license plate recognition.</li>
+        <li><strong>Low-light and wide dynamic range (WDR)</strong> capabilities for challenging environments.</li>
+        <li><strong>Onboard storage</strong> and encrypted video streams for enhanced security.</li>
+    </ul>
+
+    <h2>Cloud-Native Security Solutions</h2>
+    <p><strong>Avigilon Alta (Cloud Platform)</strong></p>
+    <ul>
+        <li><strong>Remote management</strong> of video and access devices from any location.</li>
+        <li><strong>AI-powered analytics</strong> for proactive threat detection and automated alerts.</li>
+        <li><strong>Scalable storage</strong> with cloud archiving and redundancy.</li>
+        <li><strong>Mobile app support</strong> for real-time monitoring and response.</li>
+    </ul>
+
+    <h2>Unified Security Management</h2>
+    <p><strong>Avigilon Unity Platform</strong></p>
+    <ul>
+        <li><strong>Single dashboard</strong> for monitoring and managing all security devices.</li>
+        <li><strong>Integration with Avigilon and third-party hardware.</strong></li>
+        <li><strong>Automated incident detection</strong> and workflow management.</li>
+        <li><strong>Comprehensive reporting and audit trails.</strong></li>
+    </ul>
+
+    <h2>Advanced Video Analytics</h2>
+    <p><strong>Avigilon Appearance Search™ and AI Analytics</strong></p>
+    <ul>
+        <li><strong>AI-driven search</strong> based on clothing, color, or vehicle type.</li>
+        <li><strong>Facial recognition</strong> and license plate reading for rapid identification.</li>
+        <li><strong>Real-time alerts</strong> for persons or vehicles of interest.</li>
+    </ul>
+
+    <h2>Access Control and Video Intercom</h2>
+    <p><strong>Avigilon Video Intercom</strong></p>
+    <ul>
+        <li><strong>Touchscreen interface</strong> for visitor management.</li>
+        <li><strong>Integrated camera</strong> with AI analytics for identity verification.</li>
+        <li><strong>Remote door release</strong> and two-way audio.</li>
+    </ul>
+
+    <h2>Popular Avigilon Products Summary Table</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <th>Function</th>
+                <th>Key Features</th>
+            </tr>
+            <tr>
+                <td>H6A/H6X Camera Series</td>
+                <td>AI-enabled surveillance cameras</td>
+                <td>4K/8K video, advanced analytics, WDR</td>
+            </tr>
+            <tr>
+                <td>Avigilon Unity Platform</td>
+                <td>Unified security management</td>
+                <td>Video, access, analytics integration</td>
+            </tr>
+            <tr>
+                <td>Avigilon Alta</td>
+                <td>Cloud-native security</td>
+                <td>Remote management, AI analytics, mobile app</td>
+            </tr>
+            <tr>
+                <td>Avigilon Control Center 8</td>
+                <td>Video management software</td>
+                <td>Advanced analytics, Appearance Search™</td>
+            </tr>
+            <tr>
+                <td>Avigilon Video Intercom</td>
+                <td>Access control & visitor management</td>
+                <td>Touchscreen, camera, AI analytics</td>
+            </tr>
+            <tr>
+                <td>Avigilon Radio Alert</td>
+                <td>Instant notifications</td>
+                <td>Radio integration, real-time alerts</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h1>Runoffs and Cable Estimation</h1>
+    <p>In physical security and network infrastructure, a "runoff" is the critical process of estimating the total length of cabling required for a project before physical installation begins. Accurate runoffs ensure that teams order the correct amount of CAT6 for IP cameras, fiber optic cable for network uplinks, and electrical wiring for power supplies, minimizing both material waste and project delays.</p>
+    
+    <img src="assets/construction_runoffs.png" alt="Construction Runoffs Example">
+    
+    <p>Technicians and estimators typically calculate runoffs using digital blueprints. This involves mapping the exact path a cable will take from the IDF/MDF (telecom room) to the edge device (like a camera or card reader). Calculations must account for horizontal distances across the floor plan, vertical drops through walls or conduits, and "service loops" (extra cable left at the ends for future maintenance).</p>
+
+    <img src="assets/adobe_line_measuring_tool.png" alt="Adobe Line Measuring Tool for Blueprints">
+    
+    <p>Digital estimation tools, such as the measuring features in Adobe Acrobat or specialized CAD software, allow technicians to set a scale (e.g., ¼ inch = 1 foot) and trace the wire paths directly on the digital floor plan.</p>
+
+    <img src="assets/runoffs_3.png" alt="Detailed Runoff Calculations">
+    <img src="assets/total_runoffs.png" alt="Total Runoffs Summary">
+
+    <hr>
+
+    <h1>Floor Plan Wire Runs</h1>
+    <img src="assets/entire_floorplan.png" alt="Entire Building Floorplan">
+    
+    <h2>Designing Wire Maps</h2>
+    <pre>
+[ELECTRICAL PANEL]
+│
+├───[POWER]──────Office 1 (Outlet)
+│   │
+│   ├──────Office 2 (Outlet)
+│   │
+│   └──────Conference Room (Outlet)
+│
+├───[DATA]───────Server Room (Ethernet Switch)
+│   │
+│   ├──────Access Point 1 (CAT6)
+│   │
+│   └──────Security Cameras (Coaxial/PoE)
+│
+└───[COMMS]──────Telecom Room (Fiber Optic)
+    │
+    └──────Front Desk (Phone Line)
+    </pre>
+
+    <h2>Using AI to Calculate Distances</h2>
+    <blockquote>
+        <p>Have made significant progress in automating parts of the runoff process. What about preventing miscalculations from the AI? The method uses source documents which I provide from the training manual, which grounds the AI in truth. Then I set guardrails to be factual. This uses <strong>Perplexity AI Pro</strong>.</p>
+    </blockquote>
+
+    <h3>Prompt:</h3>
+    <blockquote>
+        <p>"For the building blueprint, count the number of smoke alarms, the number of rooms, the number of manual pull stations, the number of strobes"</p>
+    </blockquote>
+
+    <h3>Result:</h3>
+    <blockquote>
+        <p><strong>Perplexity AI:</strong> Here are the counts based on the provided building blueprints:</p>
+        <p><strong>SMOKE ALARMS; 82</strong></p>
+        <ul>
+            <li><strong>FIRST FLOOR: 18 rooms</strong></li>
+            <li><strong>SECOND FLOOR: 32 rooms</strong></li>
+            <li><strong>THIRD FLOOR: 32 rooms</strong></li>
+        </ul>
+    </blockquote>
+
+    <h2>Room Area & Wiring Requirements</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Room Labels</th>
+                <th>Wire (ft)</th>
+                <th>Detectors</th>
+                <th>Area (sqft)</th>
+                <th># Rooms</th>
+                <th>Total Building Wire (ft)</th>
+                <th>Total Building Area</th>
+            </tr>
+            <tr>
+                <td>A1</td>
+                <td>118</td>
+                <td>2</td>
+                <td>&gt; 939</td>
+                <td>44</td>
+                <td>5,192</td>
+                <td>41,316</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>93</td>
+                <td>2</td>
+                <td>&gt; 911</td>
+                <td>10</td>
+                <td>930</td>
+                <td>9,110</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>109</td>
+                <td>2</td>
+                <td>&gt; 822</td>
+                <td>1</td>
+                <td>109</td>
+                <td>822</td>
+            </tr>
+            <tr>
+                <td>B1</td>
+                <td>63</td>
+                <td>3</td>
+                <td>&gt; 900</td>
+                <td>92</td>
+                <td>5,796</td>
+                <td>82,800</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>40</td>
+                <td>3</td>
+                <td>&gt; 902</td>
+                <td>9</td>
+                <td>360</td>
+                <td>8,118</td>
+            </tr>
+            <tr>
+                <td>B3</td>
+                <td>69</td>
+                <td>3</td>
+                <td>&gt; 1027</td>
+                <td>10</td>
+                <td>690</td>
+                <td>10,270</td>
+            </tr>
+            <tr>
+                <td>B4</td>
+                <td>118</td>
+                <td>3</td>
+                <td>&gt; 939</td>
+                <td>9</td>
+                <td>1,062</td>
+                <td>8,451</td>
+            </tr>
+            <tr>
+                <td>B5</td>
+                <td>93</td>
+                <td>3</td>
+                <td>&gt; 911</td>
+                <td>10</td>
+                <td>930</td>
+                <td>9,110</td>
+            </tr>
+            <tr>
+                <td>B6</td>
+                <td>109</td>
+                <td>3</td>
+                <td>&gt; 822</td>
+                <td>20</td>
+                <td>2,180</td>
+                <td>16,440</td>
+            </tr>
+            <tr>
+                <td>C1</td>
+                <td>68</td>
+                <td>3</td>
+                <td>&gt; 1178</td>
+                <td>20</td>
+                <td>1,360</td>
+                <td>23,560</td>
+            </tr>
+            <tr>
+                <td>C2</td>
+                <td>83</td>
+                <td>4</td>
+                <td>&gt; 1166</td>
+                <td>2</td>
+                <td>166</td>
+                <td>2,332</td>
+            </tr>
+            <tr style="font-weight: bold; background-color: #f4f4f4;">
+                <td>Total</td>
+                <td>&gt; 963</td>
+                <td>31</td>
+                <td>&gt; 10,517</td>
+                <td>227</td>
+                <td>18,775</td>
+                <td>212,329</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
