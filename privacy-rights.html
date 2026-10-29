@@ -111,6 +111,18 @@
         }
         .hashtags { margin-top: 1.5rem; font-size: 0.9rem; color: var(--muted); }
         .hashtags a { margin-right: 0.5rem; }
+        .share-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; }
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.5rem 1rem; border-radius: 999px; text-decoration: none;
+            font-size: 0.9rem; font-weight: 600; color: #0a2540; background: var(--accent);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .share-btn:hover { background: #ffffff; transform: translateY(-2px); }
+        .share-btn.x { background: #000000; color: #ffffff; }
+        .share-btn.facebook { background: #1877f2; color: #ffffff; }
+        .share-btn.linkedin { background: #0a66c2; color: #ffffff; }
+        .share-btn.copy { background: var(--card); color: var(--accent); border: 1px solid var(--border); }
     </style>
 </head>
 <body>
@@ -268,6 +280,15 @@
         </section>
 
         <section>
+            <h2>Share This Page</h2>
+            <p>Help others understand their privacy rights.</p>
+            <div class="share-buttons">
+                <a class="share-btn x" href="https://twitter.com/intent/tweet?url=https://privacy-rights.pages.dev/&text=Know%20Your%20Privacy%20Rights%20%E2%80%94%204th%20Amendment%20%26%20Surveillance%20Cameras&hashtags=FourthAmendment,PrivacyRights,KnowYourRights" target="_blank" rel="noopener">Share on X</a>
+                <a class="share-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://privacy-rights.pages.dev/" target="_blank" rel="noopener">Share on Facebook</a>
+                <a class="share-btn linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://privacy-rights.pages.dev/" target="_blank" rel="noopener">Share on LinkedIn</a>
+                <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy Link', 2000)">Copy Link</button>
+            </div>
+
             <h2>Take the Next Step</h2>
             <p>Understanding your rights is the first step. Privacy issues can escalate quickly — the sooner you assess the situation, the more options you may have.</p>
             <p><a class="cta" href="index.html">View the full technical camera systems manual</a></p>
