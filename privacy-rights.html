@@ -13,31 +13,40 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #e2e8f0; --muted: #94a3b8; }
+        :root {
+            --bg: #0a2540;
+            --card: #123a5f;
+            --accent: #7dd3fc;
+            --accent-strong: #38bdf8;
+            --text: #e0f2fe;
+            --muted: #bae6fd;
+            --border: #1e4a73;
+        }
         * { box-sizing: border-box; }
         body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.25rem; }
-        header { text-align: center; padding: 3rem 1rem 2rem; }
-        h1 { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.1; margin: 0 0 1rem; }
+        header { text-align: center; padding: 3rem 1rem 2rem; background: linear-gradient(180deg, #0c4a6e 0%, var(--bg) 100%); }
+        h1 { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.1; margin: 0 0 1rem; color: #ffffff; }
         .sub { font-size: 1.15rem; color: var(--muted); max-width: 640px; margin: 0 auto 1.5rem; }
-        .cta { display: inline-block; background: var(--accent); color: #0f172a; font-weight: 700; padding: 0.85rem 1.75rem; border-radius: 999px; text-decoration: none; }
-        .cta:hover { opacity: 0.9; }
-        .disclaimer { background: #1e3a5f; border-left: 4px solid var(--accent); padding: 1rem 1.25rem; margin: 2rem 0; border-radius: 0 8px 8px 0; font-size: 0.95rem; }
+        .cta { display: inline-block; background: var(--accent-strong); color: #0a2540; font-weight: 700; padding: 0.85rem 1.75rem; border-radius: 999px; text-decoration: none; }
+        .cta:hover { background: var(--accent); }
+        .disclaimer { background: #0e3a5f; border-left: 4px solid var(--accent); padding: 1rem 1.25rem; margin: 2rem 0; border-radius: 0 8px 8px 0; font-size: 0.95rem; color: var(--text); }
         section { margin: 3rem 0; }
-        h2 { font-size: 1.75rem; margin-bottom: 0.75rem; }
-        .quote { font-size: 1.15rem; font-style: italic; border-left: 3px solid var(--accent); padding-left: 1rem; margin: 1.5rem 0; color: #cbd5e1; }
+        h2 { font-size: 1.75rem; margin-bottom: 0.75rem; color: var(--accent); }
+        .quote { font-size: 1.15rem; font-style: italic; border-left: 3px solid var(--accent); padding-left: 1rem; margin: 1.5rem 0; color: #bae6fd; }
         .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
-        .card { background: var(--card); padding: 1.25rem; border-radius: 12px; }
-        .card h3 { margin-top: 0; }
+        .card { background: var(--card); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border); }
+        .card h3 { margin-top: 0; color: var(--accent); }
         .steps { counter-reset: step; }
         .steps li { list-style: none; margin: 0.75rem 0; padding-left: 2rem; position: relative; }
-        .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; background: var(--accent); color: #0f172a; width: 1.5rem; height: 1.5rem; border-radius: 50%; text-align: center; font-size: 0.85rem; font-weight: 700; line-height: 1.5rem; }
-        details { background: var(--card); margin: 0.5rem 0; padding: 0.75rem 1rem; border-radius: 8px; }
-        summary { cursor: pointer; font-weight: 600; }
-        footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid #334155; margin-top: 3rem; }
+        .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; background: var(--accent-strong); color: #0a2540; width: 1.5rem; height: 1.5rem; border-radius: 50%; text-align: center; font-size: 0.85rem; font-weight: 700; line-height: 1.5rem; }
+        details { background: var(--card); margin: 0.5rem 0; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border); }
+        summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+        footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); margin-top: 3rem; background: #08253d; }
         a { color: var(--accent); }
-        .subtle { font-size: 0.95rem; color: var(--muted); border-left: 2px solid #334155; padding-left: 1rem; margin: 1.5rem 0; }
-        .manual-box { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+        a:hover { color: var(--accent-strong); }
+        .subtle { font-size: 0.95rem; color: var(--muted); border-left: 2px solid var(--border); padding-left: 1rem; margin: 1.5rem 0; }
+        .manual-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
     </style>
 </head>
 <body>
