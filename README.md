@@ -20,7 +20,11 @@ This manual is styled to drop into [sdcastillo/landingpage](https://github.com/s
 
 It includes the shared site header/footer (Samuel Castillo nav, Research/About menus, Linktree QR, translate widget). Site chrome asset paths (`/assets/...`, `/homeindex.html`) resolve on the live domain; local preview keeps the reader chrome working either way.
 
-## What’s included
+## Free preview and full field guide
+
+The site is a free preview: the overview, camera types, a sample chapter (ExacqVision NVR re-imaging) and a pre-install checklist. The complete manual is sold as a PDF via Cash App (`$samiamcastillo`) and delivered by email. Prices live in one place: `field-guide-offer.js`.
+
+## What the full field guide covers
 
 - Camera types and IoT / network fundamentals
 - ExacqVision, Avycon, and Camect Hub procedures
@@ -37,4 +41,4 @@ It includes the shared site header/footer (Samuel Castillo nav, Research/About m
 
 ## Source notes
 
-`book.md` is the markdown source companion. The interactive reader is `index.html` with `style.css` and `app.js`.
+The full markdown source is kept privately and is no longer in this repo. The interactive reader is `index.html` with `style.css` and `app.js`.
