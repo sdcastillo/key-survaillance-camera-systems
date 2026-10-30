@@ -1110,3 +1110,18 @@ mark.search-hit {
     transition: none;
   }
 }
+
+/* ---- Free preview + full field guide offer (camera-manual-freemium) ---- */
+.fg-preview-note { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: .75rem 1rem; border-radius: var(--radius); margin: 1.25rem 0; }
+.fg-locked { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: .5rem; }
+.fg-locked li { border: 1px solid var(--line); border-radius: var(--radius); padding: .6rem .85rem; background: var(--bg-elevated); }
+.fg-locked li span { display: block; color: var(--ink-muted); font-size: .9em; }
+.fg-offer { border: 1px solid var(--lp-border); border-radius: 10px; padding: 1.5rem; margin: 2rem 0; background: var(--bg-elevated); }
+.fg-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+.fg-tier { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem; display: flex; flex-direction: column; gap: .4rem; }
+.fg-tier p { margin: 0; }
+.fg-tier-name { font-weight: 600; }
+.fg-tier-price { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+.fg-tier-blurb { color: var(--ink-muted); flex: 1; }
+.fg-pay { align-self: flex-start; margin-top: .5rem; }
+.fg-steps { color: var(--ink-muted); }
