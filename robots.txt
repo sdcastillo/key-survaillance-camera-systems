@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://key-survaillance-camera-systems.pages.dev/sitemap.xml
