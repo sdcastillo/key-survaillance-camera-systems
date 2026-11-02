@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Key Surveillance Camera Systems | Installation &amp; Setup Manual — Samuel Castillo</title>
+    <title>Privacy &amp; Accountability | Key Surveillance Camera Systems — Samuel Castillo</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="canonical" href="https://www.predictiveinsightsai.com/key-survaillance-camera-systems-main/">
-    <meta name="description" content="Field installation and setup manual for CCTV, NVR, access control, and network security systems — Camect, ExacqVision, Avycon, and Kantech.">
+    <meta name="description" content="A privacy-first guide to surveillance systems, public oversight, documented ALPR reporting, and safer camera installation practices.">
     <meta name="author" content="Samuel Castillo">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:site_name" content="Predictive Insights AI">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.predictiveinsightsai.com/key-survaillance-camera-systems-main/">
-    <meta property="og:title" content="Key Surveillance Camera Systems — Installation &amp; Setup Manual">
-    <meta property="og:description" content="Field guide for CCTV, NVR, access control, and network deployments.">
+    <meta property="og:title" content="Privacy &amp; Accountability | Key Surveillance Camera Systems">
+    <meta property="og:description" content="Privacy-first context, source-backed ALPR reporting, and safer installation guidance.">
     <meta property="og:image" content="https://www.predictiveinsightsai.com/key-survaillance-camera-systems-main/assets/camera_recording.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Key Surveillance Camera Systems — Installation &amp; Setup Manual">
-    <meta name="twitter:description" content="Field guide for CCTV, NVR, access control, and network deployments.">
+    <meta name="twitter:title" content="Privacy &amp; Accountability | Key Surveillance Camera Systems">
+    <meta name="twitter:description" content="Privacy-first context, source-backed ALPR reporting, and safer installation guidance.">
+    <link rel="alternate" type="application/json" href="data/evidence.json" title="Evidence register">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -110,15 +111,130 @@
         <article class="doc" id="doc">
 
 <header class="hero" id="welcome">
-  <p class="hero-brand">Key Surveillance Systems</p>
-  <h1>Installation &amp; Setup Manual</h1>
-  <p class="hero-lede">Field guide for CCTV, NVR, access control, and network deployments — Camect, ExacqVision, Avycon, Kantech, and more.</p>
+  <p class="hero-brand">Privacy, accountability, and practical context</p>
+  <h1>Surveillance Systems: Privacy &amp; Accountability</h1>
+  <p class="hero-lede">Understand what camera systems collect, what public reporting documents, and what safeguards residents can ask their local agencies to prove. The installation manual remains available below, with security corrections beside the relevant procedures.</p>
   <div class="hero-actions">
-    <a class="btn btn-primary" href="#camera-types">Start with camera types</a>
-    <a class="btn btn-ghost" href="#anchor-15">Camect install</a>
-    <a class="btn btn-ghost" href="#anchor-2">ExacqVision NVR</a>
+    <a class="btn btn-primary" href="#flock-alpr">ALPR reporting &amp; evidence</a>
+    <a class="btn btn-ghost" href="#installation-manual">Installation manual</a>
+    <a class="btn btn-ghost" href="#site-privacy">How this page works</a>
   </div>
 </header>
+
+<section class="privacy-intro" aria-labelledby="privacy-intro-title">
+  <h2 id="privacy-intro-title">Privacy first. Evidence before conclusions.</h2>
+  <p>Automated license plate readers (ALPRs) record vehicle and location observations that can become searchable over time. Their real-world safeguards depend on local policy, configuration, access, sharing, and enforcement—not only on a vendor’s published commitments.</p>
+  <nav class="privacy-nav" aria-label="Page sections">
+    <a href="#editorial-transparency">Editorial disclosures</a>
+    <a href="#flock-alpr">Flock and ALPR evidence</a>
+    <a href="#privacy-oversight">Residents’ oversight checklist</a>
+    <a href="#technical-corrections">Technical corrections</a>
+    <a href="#installation-manual">Installation manual</a>
+    <a href="#site-privacy">Page privacy</a>
+  </nav>
+</section>
+
+<section class="evidence-section" id="editorial-transparency" aria-labelledby="editorial-title">
+  <p class="section-kicker">Editorial transparency</p>
+  <h2 id="editorial-title">What this guide is—and is not</h2>
+  <div class="evidence-grid">
+    <article class="evidence-card">
+      <h3>Authorship and scope</h3>
+      <p>Samuel Castillo is named as the author. The source companion describes this as a research-grant manual and contains ISC-oriented workflows; this page does not include a grant citation or establish current vendor authorization.</p>
+    </article>
+    <article class="evidence-card">
+      <h3>Review and limitations</h3>
+      <p>This is an edited field guide, not a manufacturer publication, legal advice, certified training, or a complete security-hardening standard. No independent technical or legal review is identified in the repository.</p>
+    </article>
+    <article class="evidence-card">
+      <h3>Funding and conflicts</h3>
+      <p>The source repository has no current funding or conflict-of-interest disclosure. That absence does not establish that no relationships exist; readers should request clarification where it matters.</p>
+    </article>
+    <article class="evidence-card">
+      <h3>Source and correction policy</h3>
+      <p>Vendor statements, news reporting, and technical references are labeled separately. Core linked sources were checked on November 2, 2026; product procedures were not all independently revalidated. <a href="https://github.com/sdcastillo/key-survaillance-camera-systems/issues" target="_blank" rel="noopener noreferrer">Suggest a correction on GitHub</a>. Do not post passwords, personal information, or sensitive incident details in a public issue.</p>
+    </article>
+  </div>
+</section>
+
+<section class="evidence-section" id="flock-alpr" aria-labelledby="flock-title">
+  <p class="section-kicker">Source-backed context</p>
+  <h2 id="flock-title">Flock Safety and automated license plate readers</h2>
+  <p>ALPR systems capture plate images, vehicle characteristics, timestamps, and camera locations. A searchable record of sightings can reveal movement patterns. The cards below distinguish the company’s descriptions from local implementation and independent reporting; they do not prove that a particular agency follows a stated policy.</p>
+
+  <div class="evidence-grid">
+    <article class="evidence-card" data-claim-id="flock-data-practices" data-claim-type="vendor-statement" data-status="vendor-described-local-settings-unverified">
+      <p class="claim-label">Vendor statement · local settings not verified</p>
+      <h3>Retention, access, and sharing</h3>
+      <p>Flock says customers set retention and access policies, recommends a seven-day period, and allows data to be preserved as evidence for an active investigation. Its published materials also describe search logs and customer-controlled sharing. Those are vendor descriptions—not evidence of a specific jurisdiction’s actual configuration, audit practice, or deletion.</p>
+      <p class="source-links">Sources: <a href="https://www.flocksafety.com/trust/data-privacy" target="_blank" rel="noopener noreferrer">Flock data privacy</a> · <a href="https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency" target="_blank" rel="noopener noreferrer">Flock guardrails announcement</a></p>
+    </article>
+    <article class="evidence-card" data-claim-id="flock-safeguards-announcements" data-claim-type="vendor-announcement" data-status="announced-deployment-unverified">
+      <p class="claim-label">Vendor announcement · deployment not verified</p>
+      <h3>New safeguards require local confirmation</h3>
+      <p>Flock announced a seven-day retention recommendation, evidence-preservation mode, offense filters for sharing, expanded audit assistance, proactive lockouts, and case-code requirements. The announcement describes planned or rolling changes; confirm effective dates, agency adoption, exceptions, and audit results with the specific agency.</p>
+      <p class="source-links">Source: <a href="https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency" target="_blank" rel="noopener noreferrer">Flock’s announcement</a></p>
+    </article>
+    <article class="evidence-card" data-claim-id="atlanta-reporting" data-claim-type="journalistic-report" data-status="reported-not-independent-audit">
+      <p class="claim-label">News reporting · agency figures attributed</p>
+      <h3>Atlanta: a reported mistaken-identity stop and policy review</h3>
+      <p>CNN reported on November 1, 2026 that police stopped a driver after an ALPR sighting connected a similar vehicle to a suspect, then released him after confirming he was not the suspect. CNN also reported that Atlanta police characterized 79 searches as potentially questionable and said they were being reviewed; the department’s reported figure was 0.07% of searches examined. These are reported events and agency figures, not an independent audit by this page. The article describes a revised department policy and a separate citywide proposal; verify their current status with the city.</p>
+      <p class="source-links">Source: <a href="https://us.cnn.com/2026/11/01/us/flock-cameras-atlanta-privacy-backlash" target="_blank" rel="noopener noreferrer">CNN, “Flock cameras fuel privacy backlash in Atlanta” (November 1, 2026)</a></p>
+    </article>
+    <article class="evidence-card" data-claim-id="cleveland-shaker-reporting" data-claim-type="journalistic-report" data-status="reporting-primary-policy-not-verified">
+      <p class="claim-label">News reporting · primary policy text not verified here</p>
+      <h3>Cleveland and Shaker Heights: local limits matter</h3>
+      <p>An October 2026 Cleveland.com report focuses on limits Cleveland and Shaker Heights place on disclosure of Flock camera data. The article is reporting, not the underlying policy text; consult current ordinances, agency rules, records, and court decisions before treating any restriction as applicable or settled.</p>
+      <p class="source-links">Source: <a href="https://www.cleveland.com/metro/2026/10/how-cleveland-and-shaker-heights-restrict-flocks-disclosure-of-camera-data.html" target="_blank" rel="noopener noreferrer">Cleveland.com, “How Cleveland and Shaker Heights restrict Flock’s disclosure of camera data” (October 2026)</a>. The publisher returned HTTP 403 in this review; the underlying local policy was not verified.</p>
+    </article>
+  </div>
+
+  <section class="oversight-panel" id="privacy-oversight" aria-labelledby="oversight-title">
+    <h3 id="oversight-title">Questions residents can ask</h3>
+    <ul>
+      <li>What exact data is collected, where is it stored, and which agency or vendor can access it?</li>
+      <li>What is the locally configured retention period? Are there evidence holds, legal holds, or exceptions—and who authorizes and reviews them?</li>
+      <li>Which agencies can search or receive data through sharing networks, for what purposes, and under what written restrictions?</li>
+      <li>Are searches tied to a case number and documented purpose? Who reviews search logs, how often, and what public audit summaries are released?</li>
+      <li>How are unusual searches detected, access suspended, complaints investigated, and misuse referred for discipline or prosecution?</li>
+      <li>What testing and procedures address inaccurate plate reads, similar vehicles, misidentification, and downstream stops?</li>
+      <li>What notice, public comment, procurement, contract, and renewal process applies to deployment?</li>
+      <li>How can residents request records, challenge a misuse, or seek deletion—and what legal exceptions apply?</li>
+      <li>Are independent audits, incident reports, sharing agreements, and current policies available for public review?</li>
+    </ul>
+  </section>
+</section>
+
+<section class="evidence-section" id="technical-corrections" aria-labelledby="technical-title">
+  <p class="section-kicker">Safety and accuracy notes</p>
+  <h2 id="technical-title">Technical corrections before using the procedures</h2>
+  <div class="correction-grid">
+    <article class="correction-card" data-claim-id="password-exposure">
+      <h3>Credentials</h3>
+      <p>Do not use credentials copied from a manual or leave factory defaults in service. Use authorized, unique credentials; change initial passwords before deployment; and rotate any credentials previously shared in public documentation. See <a href="https://www.cisa.gov/news-events/alerts/2013/06/24/risks-default-passwords-internet" target="_blank" rel="noopener noreferrer">CISA’s default-password guidance</a>.</p>
+    </article>
+    <article class="correction-card" data-claim-id="remote-access-safety">
+      <h3>Remote access</h3>
+      <p>Do not expose camera, recorder, or hub management services directly to the public internet by default. Prefer a vendor-supported VPN or other reviewed secure-access design, restrict access, and verify firewall rules with the system owner. Port-forwarding examples below are not a security recommendation. See <a href="https://www.cisa.gov/resources-tools/resources/layering-network-security-through-segmentation-infographic" target="_blank" rel="noopener noreferrer">CISA’s network-segmentation guidance</a>.</p>
+    </article>
+    <article class="correction-card" data-claim-id="subnet-mask-guidance">
+      <h3>IP subnets</h3>
+      <p>Devices need compatible IP addressing and subnet masks, not necessarily matching first three address segments. That shortcut only describes common /24 networks. Confirm the configured network and gateway; subnet membership is determined by the address and mask together. See <a href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html" target="_blank" rel="noopener noreferrer">Cisco’s subnetting explanation</a>.</p>
+    </article>
+    <article class="correction-card" data-claim-id="network-segmentation">
+      <h3>Network boundaries</h3>
+      <p>A “one-way mirror” is only an analogy. Network directionality is not guaranteed by being on a local network: routing, firewall rules, exposed services, and device configuration determine what can communicate. Use explicit segmentation and access controls.</p>
+    </article>
+    <article class="correction-card" data-claim-id="aperture-depth">
+      <h3>Aperture and focus</h3>
+      <p>A higher f-number narrows the aperture and can increase depth of field, but also reduces light reaching the sensor. It does not guarantee sharper focus in every scene; exposure, lens, lighting, and motion matter. See <a href="https://help.axis.com/en-us/troubleshooting-image-quality" target="_blank" rel="noopener noreferrer">Axis’s image-quality guide</a>.</p>
+    </article>
+    <article class="correction-card">
+      <h3>Firmware versions</h3>
+      <p>Firmware requirements vary by model and integration. Check the current manufacturer release notes and compatibility matrix for the exact device; this guide does not establish a universal minimum version.</p>
+    </article>
+  </div>
+</section>
 
 <section class="callout" aria-label="What this manual covers">
   <h2 id="about-this-manual">About this manual</h2>
@@ -130,6 +246,9 @@
     <li><strong>Design</strong> — network basics, runoffs, and floor-plan wire maps</li>
   </ul>
 </section>
+
+<h2 id="installation-manual">Installation &amp; Setup Manual</h2>
+<p class="manual-intro">The field procedures below are retained for reference. Verify current vendor documentation, authorization, site policy, and security requirements before applying a device-specific step.</p>
 
 <h2 id="camera-types">Camera Types</h2>
 
@@ -154,7 +273,7 @@
     <p>Each type serves distinct security needs, ranging from home monitoring to business surveillance.</p>
     <p>Basic operations such as powering on/off, using the viewfinder, and the LCD screen.</p>
     <p><strong>ISO</strong> stands for International Organization for Standardization, indicating the camera's sensitivity to light. Utilize a low ISO in bright conditions and a high ISO in dim lighting.</p>
-    <p>Aperture refers to the opening in the camera lens through which light passes, measured in F-stops. A lower F-stop means more light is let in, while a higher F-stop is ideal for bright conditions and sharper focus.</p>
+    <p>Aperture refers to the opening in the camera lens through which light passes, measured in F-stops. A lower F-number means more light reaches the sensor; a higher F-number can increase depth of field but does not guarantee sharper focus in every scene.</p>
     <p>A practical, step-by-step guide for camera installation teams working with Camect, ExacqVision and Avycon Systems. This manual covers essential procedures including system re-imaging, camera integration, remote viewing setup, troubleshooting, and advanced software features. Designed for technicians with hands-on experience, it delivers clear instructions, best practices, and quick-reference workflows to ensure reliable, professional surveillance deployments in any environment.</p>
 
     <h1 id="internet-of-things">Internet of Things</h1>
@@ -163,7 +282,7 @@
 
     <h2 id="all-of-this-relies-on-strong-connections">All of this relies on strong connections</h2>
     <p>Whether wired or wireless, think of the network as the backbone of IoT—a channel that lets devices talk to each other. In a typical office, for example, you'll find a WiFi network connecting laptops and computers, a separate network for printers, and remote connections that link different office locations together, making it feel like everyone's in the same room, even if they're miles apart.</p>
-    <p>Thanks to these networks, you can send a document from your computer to the printer with a click, or cast a presentation from your laptop to the conference room TV via Bluetooth, allowing everyone to share information instantly. Networks also act as a security barrier: people inside the office can access resources from the outside world, but outsiders can't easily reach sensitive information inside—much like looking through a one-way mirror.</p>
+    <p>Thanks to these networks, you can send a document from your computer to the printer with a click, or cast a presentation from your laptop to the conference room TV via Bluetooth, allowing everyone to share information instantly. Networks can separate resources, but a “one-way mirror” is only an analogy: routing, firewall rules, exposed services, and device configuration determine what can communicate.</p>
 
     <h2 id="in-short">In short</h2>
     <p>IoT and the networks that support it are what make our modern, connected lives possible, seamlessly linking people, devices, and information. Networks in IoT systems are designed with security in mind, using encryption and authentication to protect data and devices from unauthorized access. They also allow for centralized management, making it easier to monitor device health, update software, and enforce security policies.</p>
@@ -454,7 +573,7 @@
         <li>Navigate to the <em>Setup</em> tab.</li>
         <li>Select the server, then go to the <em>IP Cameras</em> section.</li>
         <li>Click <em>Add</em> and enter the camera's IP address, username, and password.</li>
-        <li>Ensure the camera shares the first three segments of its IP address with the server for successful integration.</li>
+        <li>Confirm that the camera and server have compatible IP addresses and subnet masks, and that routing and firewall rules permit the required traffic.</li>
         <li>Click <em>Apply</em> and verify the camera connects.</li>
         <li>Go to the <em>Maps</em> section, select the desired map, and drag the new camera onto the map layout.</li>
         <li>Save changes.</li>
@@ -522,22 +641,28 @@
 
     <h1 id="anchor-12">Remote Viewing</h1>
     <p><strong>How to Set Up an ExacqVision NVR for Remote Viewing</strong></p>
+    <aside class="security-warning" aria-label="Remote-access security warning">
+        <strong>Security prerequisite:</strong> Do not expose recorder management ports directly to the public internet by default. Prefer an approved VPN or vendor-supported secure relay, and validate the design with the system owner before changing firewall rules.
+    </aside>
     <ul>
         <li>Connect the NVR to the network and ensure Internet access.</li>
         <li>Open the ExacqVision Client and log in as admin.</li>
         <li>Go to <em>System</em> &gt; <em>Network</em> settings.</li>
         <li>Configure the NVR with a static IP address.</li>
-        <li>Set up port forwarding on the router for the required ExacqVision ports (default: 80, 443, 22609).</li>
-        <li>Register for Exacq cloud-hosted relay service for simplified remote access if available.</li>
+        <li>Do not forward management ports directly unless the system owner and security review explicitly approve that design; verify current vendor guidance and restrict any permitted access.</li>
+        <li>Use an officially supported secure relay if available and approved for the site.</li>
         <li>Test remote connectivity using the ExacqVision mobile or desktop client from an external network.</li>
     </ul>
 
     <p><strong>How to Set Up an Avycon NVR for Remote Viewing</strong></p>
+    <aside class="security-warning" aria-label="Remote-access security warning">
+        <strong>Security prerequisite:</strong> Avoid direct internet exposure of HTTP, RTSP, or recorder management services. Use a reviewed VPN or vendor-supported secure access method, with access limited to authorized users and devices.
+    </aside>
     <ul>
         <li>Connect the NVR to the network and ensure it has Internet access.</li>
         <li>Assign a static IP address to the NVR.</li>
-        <li>Set up port forwarding on the router for HTTP, RTSP, and client ports.</li>
-        <li>Enable P2P/Cloud access in the NVR's network settings if available.</li>
+        <li>Do not forward HTTP, RTSP, or client ports directly to the internet by default; confirm the vendor-supported secure-access design with the site owner.</li>
+        <li>Enable a vendor cloud or P2P feature only after reviewing its security, privacy, and account controls with the system owner.</li>
         <li>Scan the QR code in the mobile app or enter the NVR's serial number.</li>
         <li>Test remote viewing from an external device.</li>
     </ul>
@@ -555,12 +680,15 @@
     </ul>
 
     <p><strong>How to Set the IP Address in an Avycon Camera</strong></p>
+    <aside class="security-warning" aria-label="Credential security warning">
+        <strong>Credential prerequisite:</strong> Use an authorized account for this device. Change any initial or factory password before connecting it to a production network; do not rely on credentials copied from public guides.
+    </aside>
     <ul>
         <li>Connect the camera to the network and power it on.</li>
         <li>Use the Avycon IP search tool or access the camera's web interface from a PC.</li>
-        <li>Log in with the default credentials.</li>
+        <li>Log in with the authorized credentials assigned for this device.</li>
         <li>Navigate to <em>Network Settings</em>.</li>
-        <li>Assign a static IP address that matches the NVR's subnet (first three segments should match).</li>
+        <li>Assign an approved address and subnet mask that place the camera and NVR on compatible networks; verify routing and firewall requirements.</li>
         <li>Save and reboot the camera.</li>
         <li>Verify connectivity by pinging the camera's IP address from a PC.</li>
     </ul>
@@ -715,8 +843,11 @@
     </ol>
 
     <h2 id="9-immix-integration-central-station">9. Immix Integration (Central Station)</h2>
+    <aside class="security-warning" aria-label="Remote-access security warning">
+        <strong>Security prerequisite:</strong> Do not forward hub services directly from the internet. Use the manufacturer’s current, supported secure-access architecture and obtain site-owner approval; document and restrict any required network exception.
+    </aside>
     <ol>
-        <li>Port-forward Hub WAN to 443 & 554 at customer firewall.</li>
+        <li>Do not configure direct WAN port forwarding by default. Confirm the current Camect and Immix integration requirements and use an approved secure-access design.</li>
         <li>In Immix: Add Site → fill address, customer code.</li>
         <li>Add Device → Type =Camect, WAN IP, Secure Port = 443, credentials (local Hub admin).</li>
         <li>Auto-Configure Cameras—pull list from Hub.</li>
@@ -794,7 +925,7 @@
             <tr>
                 <td>Talk-down one-way</td>
                 <td>Mic muted in Immix</td>
-                <td>Check PC audio permissions; verify Hub FW ≥ x.x.</td>
+                <td>Check PC audio permissions; confirm the Hub firmware version is supported for this model and integration in current manufacturer documentation.</td>
             </tr>
         </table>
     </div>
@@ -817,8 +948,11 @@
     <p><strong>Integration and Cost Savings</strong></p>
     <p>🔗 Kantech EntraPass Corporate Edition integrates access control with video recording on exacqVision recorders, providing hardware, power, and cooling cost savings.</p>
     <p><strong>Installation and Configuration</strong></p>
-    <p>🔑 To install, log into the restricted user account, then the administrator account (password: admin256) on the exacqVision recorder and follow the installation walkthrough.</p>
-    <p>🎯 Configure backup targets by launching the Workstation application, logging in with admin admin256, clicking Options &gt; Backup Scheduler, and changing the default location to a removable media or network share.</p>
+    <aside class="security-warning" aria-label="Credential security warning">
+        <strong>Credential prerequisite:</strong> The original source contained a published shared password, which has been removed. Use current authorized credentials issued for the site; change any shared or factory password and check prior deployments for reuse.
+    </aside>
+    <p>🔑 To install, log into the restricted user account, then use an authorized administrator account on the ExacqVision recorder and follow the current installation walkthrough.</p>
+    <p>🎯 Configure backup targets by launching the Workstation application using an authorized account, opening Options &gt; Backup Scheduler, and selecting an approved removable-media or network-share destination.</p>
     <p><strong>Registration and Cleanup</strong></p>
     <p>📋 Kantech certified technicians must perform the registration process by providing the system serial number to Kantech.</p>
     <p>🗑️ After installation, delete the Interpass web icon and Interpass folder to free up over 1 GB of space on the exacqVision server.</p>
@@ -1560,6 +1694,14 @@
             </tr>
         </table>
     </div>
+
+<section class="evidence-section page-privacy" id="site-privacy" aria-labelledby="site-privacy-title">
+  <p class="section-kicker">Page privacy</p>
+  <h2 id="site-privacy-title">What this page loads</h2>
+  <p>This page does not provide a form for submitting personal information. Its search and reading-progress features run in the browser. The shared site template loads Google Fonts and the Google Translate script; those providers may receive routine network and browser information when the resources load.</p>
+  <p>On the Predictive Insights AI deployment, the page also references <code>/assets/analytics.js</code>. The shared script currently initializes Google Analytics 4. This repository does not contain that script, so its live configuration, consent behavior, and retention settings cannot be verified here. See the <a href="/privacy.html">site privacy policy</a> for site-wide disclosures and controls. This page itself does not display a consent banner.</p>
+  <p>External source links open only when selected. The public GitHub issue tracker is not a private contact channel; do not post personal details, credentials, or sensitive incident information there.</p>
+</section>
         </article>
         <p class="doc-note">Research-grant field manual for security consultants — CCTV, access control, and video systems.</p>
       </main>

@@ -1,6 +1,6 @@
 # Key Surveillance Camera Systems
 
-Field installation and setup manual from a research grant covering security consulting workflows for CCTV, access control, NVR platforms, and network fundamentals.
+Privacy-first public guide and field installation manual covering surveillance oversight, CCTV, access control, NVR platforms, and network fundamentals.
 
 ## Open the guide
 
@@ -22,6 +22,9 @@ It includes the shared site header/footer (Samuel Castillo nav, Research/About m
 
 ## What’s included
 
+- Privacy and accountability context for ALPR systems, with claims distinguished by source type
+- Editorial disclosures, residents’ oversight questions, and page-privacy notes
+- Security corrections for credentials, remote access, subnetting, network segmentation, aperture, and firmware
 - Camera types and IoT / network fundamentals
 - ExacqVision, Avycon, and Camect Hub procedures
 - Kantech / EntraPass access-control tutorials
@@ -37,4 +40,14 @@ It includes the shared site header/footer (Samuel Castillo nav, Research/About m
 
 ## Source notes
 
-`book.md` is the markdown source companion. The interactive reader is `index.html` with `style.css` and `app.js`.
+`book.md` is the markdown source companion. `data/evidence.json` tracks claim status, scope, sources, and review dates; do not treat vendor statements or journalism as proof of local implementation. The interactive reader is `index.html` with `style.css` and `app.js`.
+
+## Content checks
+
+Run the dependency-free content checks before publishing:
+
+```bash
+node scripts/check-content.mjs
+```
+
+The check verifies unique page IDs, internal links, image alt text, evidence-register links, required sections, and known unsafe credential, port-forwarding, subnet, and firmware-placeholder patterns. GitHub Actions runs it for pull requests and pushes to `main`.

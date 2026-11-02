@@ -672,6 +672,153 @@ a:hover {
   font-size: 0.92rem;
 }
 
+.privacy-intro,
+.evidence-section {
+  margin: 0 0 2.5rem;
+  scroll-margin-top: calc(var(--chrome-gap) + 1rem);
+}
+
+.privacy-intro {
+  padding: clamp(1.1rem, 3vw, 1.65rem);
+  border: 1px solid var(--lp-border);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), var(--bg-elevated));
+}
+
+.privacy-intro h2,
+.evidence-section > h2 {
+  margin-top: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  line-height: 1.25;
+}
+
+.privacy-intro > p,
+.evidence-section > p:not(.section-kicker) {
+  max-width: 62rem;
+  color: var(--ink-muted);
+}
+
+.privacy-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.privacy-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  text-decoration: none;
+  background: color-mix(in srgb, var(--bg-elevated) 78%, transparent);
+}
+
+.privacy-nav a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.section-kicker,
+.claim-label {
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.evidence-grid,
+.correction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.evidence-card,
+.correction-card,
+.oversight-panel {
+  min-width: 0;
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--bg-elevated) 90%, transparent);
+}
+
+.evidence-card h3,
+.correction-card h3,
+.oversight-panel h3 {
+  margin: 0 0 0.55rem;
+  color: var(--ink);
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.evidence-card p,
+.correction-card p {
+  margin: 0.45rem 0 0;
+  color: var(--ink-muted);
+}
+
+.evidence-card .source-links {
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.claim-label {
+  color: var(--warn);
+  font-size: 0.68rem;
+}
+
+.oversight-panel {
+  margin-top: 1.25rem;
+  border-left: 3px solid var(--accent);
+}
+
+.oversight-panel ul {
+  margin-bottom: 0;
+}
+
+.correction-card {
+  border-left: 3px solid var(--warn);
+}
+
+.security-warning {
+  margin: 0.8rem 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--warn) 52%, var(--line));
+  border-left: 4px solid var(--warn);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--warn) 9%, var(--bg-elevated));
+  color: var(--ink);
+}
+
+.manual-intro {
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink-muted);
+}
+
+.doc a:focus-visible,
+.site-header a:focus-visible,
+.privacy-nav a:focus-visible,
+.toc a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
 /* Typography in doc */
 
 .doc > h1,
