@@ -2,6 +2,39 @@
 
 ## Welcome
 
+## Privacy and accountability
+
+Automated license plate readers (ALPRs) record vehicle and location observations that can become searchable over time. Their real-world safeguards depend on local policy, configuration, access, sharing, and enforcement—not only on a vendor’s published commitments.
+
+### Editorial transparency
+
+- **Author:** Samuel Castillo.
+- **Scope:** The source companion describes this as a research-grant manual and contains ISC-oriented workflows; no grant citation or current vendor authorization is established here.
+- **Review:** This is an edited field guide, not a manufacturer publication, legal advice, certified training, or a complete security-hardening standard. No independent technical or legal review is identified in the repository.
+- **Funding and conflicts:** The repository contains no current funding or conflict-of-interest disclosure. That absence does not establish that no relationships exist.
+- **Source status:** Core linked sources were checked on November 2, 2026. Product procedures were not all independently revalidated.
+
+### Flock Safety and ALPR evidence
+
+**Vendor statements—not verified local implementation:** Flock says customers set retention and access policies, recommends a seven-day retention period, allows data to be preserved as evidence for an active investigation, and describes search logs and customer-controlled sharing. Its announced safeguards include evidence-preservation mode, offense filters, expanded audit assistance, proactive lockouts, and case-code requirements. Confirm current settings, rollout, exceptions, and audit results with the specific agency.
+
+Sources: [Flock data privacy](https://www.flocksafety.com/trust/data-privacy); [Flock guardrails announcement](https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency).
+
+**News reporting—not an independent audit:** CNN reported on November 1, 2026 that an ALPR sighting connected a similar vehicle to a suspect, leading police to stop and then release a different driver after confirming he was not the suspect. CNN also attributed to Atlanta police a review of 79 potentially questionable searches (reported as 0.07% of the searches examined), a revised department policy, and a separate citywide proposal. Verify current policy status with the city. [CNN report](https://us.cnn.com/2026/11/01/us/flock-cameras-atlanta-privacy-backlash).
+
+An October 2026 [Cleveland.com report](https://www.cleveland.com/metro/2026/10/how-cleveland-and-shaker-heights-restrict-flocks-disclosure-of-camera-data.html) discusses Cleveland and Shaker Heights restrictions on disclosure of Flock camera data. The report is not the underlying policy text; consult current local rules, records, and court decisions before treating a restriction as applicable or settled.
+
+**Questions residents can ask:** What data is collected and retained? Who can access it and through what sharing agreements? Are searches purpose- and case-code-limited? Who audits logs, how often, and what findings are public? How are misidentifications and misuse investigated? What notice, public comment, procurement, and renewal process applies? How can residents request records or challenge misuse, and what exceptions apply?
+
+### Technical and security corrections
+
+- Do not use credentials copied from a manual or leave factory defaults in service. Use authorized, unique credentials and change initial passwords before deployment. See [CISA’s default-password guidance](https://www.cisa.gov/news-events/alerts/2013/06/24/risks-default-passwords-internet).
+- Do not expose camera, recorder, or hub management services directly to the public internet by default. Prefer an approved VPN or vendor-supported secure-access design; review firewall rules with the system owner. See [CISA’s network-segmentation guidance](https://www.cisa.gov/resources-tools/resources/layering-network-security-through-segmentation-infographic).
+- Compatible IP networks are determined by the address and subnet mask together; matching the first three address segments only describes common /24 networks. See [Cisco’s subnetting explanation](https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html).
+- A “one-way mirror” is only an analogy. Routing, firewall rules, exposed services, and configuration determine network communication.
+- A higher f-number narrows the aperture and may increase depth of field, but also reduces light and does not guarantee sharper focus. See [Axis’s image-quality guide](https://help.axis.com/en-us/troubleshooting-image-quality).
+- Firmware requirements vary by model and integration. Check the current manufacturer release notes and compatibility matrix; this guide does not establish a universal minimum version.
+
 ![Camera Recording](./assets/camera_recording.png)
 
 Action cameras are small, rugged devices designed to capture high-quality video and images in extreme conditions. They are often used for sports and adventure photography, featuring wide-angle lenses and robust waterproof and shockproof casings. Their compact size and durability make them ideal for capturing fast-paced and immersive footage.
@@ -44,8 +77,9 @@ indicating the camera\'s sensitivity to light. Utilize a low ISO in
 bright conditions and a high ISO in dim lighting.
 
 Aperture refers to the opening in the camera lens through which light
-passes, measured in F-stops. A lower F-stop means more light is let in,
-while a higher F-stop is ideal for bright conditions and sharper focus.
+passes, measured in F-stops. A lower F-number means more light reaches
+the sensor; a higher F-number can increase depth of field but does not
+guarantee sharper focus in every scene.
 
 A practical, step-by-step guide for camera installation teams working
 with Camect, ExacqVision and Avycon Systems. This manual covers
@@ -75,10 +109,9 @@ in the same room, even if they're miles apart.
 Thanks to these networks, you can send a document from your computer to
 the printer with a click, or cast a presentation from your laptop to the
 conference room TV via Bluetooth, allowing everyone to share information
-instantly. Networks also act as a security barrier: people inside the
-office can access resources from the outside world, but outsiders can't
-easily reach sensitive information inside---much like looking through a
-one-way mirror.
+instantly. Networks can separate resources, but a “one-way mirror” is
+only an analogy: routing, firewall rules, exposed services, and device
+configuration determine what can communicate.
 
 ## In short
 
@@ -365,8 +398,9 @@ ensure a clean and easy-to-navigate final setup.
 -   Select the server, then go to the *IP Cameras* section.
 -   Click *Add* and enter the camera's IP address, username, and
     password.
--   Ensure the camera shares the first three segments of its IP address
-    with the server for successful
+-   Confirm that the camera and server have compatible IP addresses and
+    subnet masks, and that routing and firewall rules permit the
+    required traffic for successful
     integration[]{#anchor-5}[^*\[1\]*^](#fn1).
 -   Click *Apply* and verify the camera connects.
 -   Go to the *Maps* section, select the desired map, and drag the new
@@ -443,24 +477,37 @@ monitoring[]{#anchor-8}[^*\[1\]*^](#fn1).
 
 How to Set Up an ExacqVision NVR for Remote Viewing
 
+**Security prerequisite:** Do not expose recorder management ports
+directly to the public internet by default. Prefer an approved VPN or
+vendor-supported secure relay, and validate the design with the system
+owner before changing firewall rules.
+
 -   Connect the NVR to the network and ensure Internet access.
 -   Open the ExacqVision Client and log in as admin.
 -   Go to *System* \> *Network* settings.
 -   Configure the NVR with a static IP address.
--   Set up port forwarding on the router for the required ExacqVision
-    ports (default: 80, 443, 22609).
--   Register for Exacq cloud-hosted relay service for simplified remote
-    access if available[]{#anchor-13}[^*\[1\]*^](#fn1).
+-   Do not forward management ports directly unless the system owner
+    and security review explicitly approve that design; verify current
+    vendor guidance and restrict any permitted access.
+-   Use an officially supported secure relay if available and approved
+    for the site[]{#anchor-13}[^*\[1\]*^](#fn1).
 -   Test remote connectivity using the ExacqVision mobile or desktop
     client from an external network.
 
 **How to Set Up an Avycon NVR for Remote Viewing**
 
+**Security prerequisite:** Avoid direct internet exposure of HTTP, RTSP,
+or recorder management services. Use a reviewed VPN or vendor-supported
+secure access method, with access limited to authorized users and
+devices.
+
 -   Connect the NVR to the network and ensure it has Internet access.
 -   Assign a static IP address to the NVR.
--   Set up port forwarding on the router for HTTP, RTSP, and client
-    ports.
--   Enable P2P/Cloud access in the NVR's network settings if available.
+-   Do not forward HTTP, RTSP, or client ports directly to the internet
+    by default; confirm the vendor-supported secure-access design with
+    the site owner.
+-   Enable a vendor cloud or P2P feature only after reviewing its
+    security, privacy, and account controls with the system owner.
 -   Scan the QR code in the mobile app or enter the NVR's serial number.
 -   Test remote viewing from an external device.
 
@@ -477,13 +524,19 @@ How to Set Up an ExacqVision NVR for Remote Viewing
 
 **How to Set the IP Address in an Avycon Camera**
 
+**Credential prerequisite:** Use an authorized account for this device.
+Change any initial or factory password before connecting it to a
+production network; do not rely on credentials copied from public
+guides.
+
 -   Connect the camera to the network and power it on.
 -   Use the Avycon IP search tool or access the camera's web interface
     from a PC.
--   Log in with the default credentials.
+-   Log in with the authorized credentials assigned for this device.
 -   Navigate to *Network Settings*.
--   Assign a static IP address that matches the NVR's subnet (first
-    three segments should match)[]{#anchor-14}[^*\[1\]*^](#fn1).
+-   Assign an approved address and subnet mask that place the camera
+    and NVR on compatible networks; verify routing and firewall
+    requirements[]{#anchor-14}[^*\[1\]*^](#fn1).
 -   Save and reboot the camera.
 -   Verify connectivity by pinging the camera's IP address from a PC.
 
@@ -622,7 +675,14 @@ streams without re€‘adding.
 
 ## []{#anchor-25}9  Immix Integration (Central Station)
 
-1.  Port€‘forward Hub WAN to 443 & 554 at customer firewall.
+**Security prerequisite:** Do not forward hub services directly from the
+internet. Use the manufacturer’s current, supported secure-access
+architecture and obtain site-owner approval; document and restrict any
+required network exception.
+
+1.  Do not configure direct WAN port forwarding by default. Confirm the
+    current Camect and Immix integration requirements and use an
+    approved secure-access design.
 2.  In Immix: Add Site žœ fill address, customer code.
 3.  Add Device žœ Type =Camect, WAN IP, Secure Port = 443, credentials
     (local Hub admin).
@@ -655,7 +715,7 @@ streams without re€‘adding.
   Hub not discovered           VLAN mismatch             Use laptop on same subnet; manually browse to Hub IP.
   Excess false alerts          Sensitivity mode on       Disable per camera; review lighting.
   Immix not receiving alarms   Port 443/554 blocked      Confirm NAT/ACL; test with telnet.
-  Talk€‘down one€‘way            Mic muted in Immix        Check PC audio permissions; verify Hub FW ‰¥ x.x.
+  Talk€‘down one€‘way            Mic muted in Immix        Check PC audio permissions; confirm the Hub firmware version is supported for this model and integration in current manufacturer documentation.
   ---------------------------- ------------------------- -------------------------------------------------------
 
 KamTech Tutorials
@@ -698,14 +758,18 @@ cooling cost savings.*
 
 *Installation and Configuration*
 
-*ðŸ”‘ To install, log into the restricted user account, then the
-administrator account (password: admin256) on the exacqVision recorder
-and follow the installation walkthrough.*
+**Credential prerequisite:** The original source contained a published
+shared password, which has been removed. Use current authorized
+credentials issued for the site; change any shared or factory password
+and check prior deployments for reuse.
 
-*ðŸŽ¯ Configure backup targets by launching the Workstation application,
-logging in with admin admin256, clicking Options \> Backup Scheduler,
-and changing the default location to a removable media or network
-share.*
+*ðŸ”‘ To install, log into the restricted user account, then use an
+authorized administrator account on the exacqVision recorder and follow
+the current installation walkthrough.*
+
+*ðŸŽ¯ Configure backup targets by launching the Workstation application
+using an authorized account, opening Options \> Backup Scheduler, and
+selecting an approved removable-media or network-share destination.*
 
 *Registration and Cleanup*
 
@@ -1937,4 +2001,3 @@ Area: 822sqft Wire: 109ft
 +---------+---------+---------+---------+---------+---------+---------+
 
 # []{#anchor-39} {#section-5}
-

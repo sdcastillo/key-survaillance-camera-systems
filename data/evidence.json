@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-02",
+  "claims": [
+    {
+      "id": "flock-data-practices",
+      "type": "vendor-statement",
+      "status": "vendor-described-local-settings-unverified",
+      "scope": "Flock's published description; not independently verified for any local agency",
+      "sourceIds": ["flock-privacy", "flock-guardrails"]
+    },
+    {
+      "id": "flock-safeguards-announcements",
+      "type": "vendor-announcement",
+      "status": "announced-deployment-unverified",
+      "scope": "Company-announced or rolling changes; agency adoption and effective dates require local confirmation",
+      "sourceIds": ["flock-guardrails"]
+    },
+    {
+      "id": "atlanta-reporting",
+      "type": "journalistic-report",
+      "status": "reported-not-independent-audit",
+      "scope": "CNN reporting; police figures are attributed to Atlanta Police Department",
+      "eventDate": "May 3 (year not stated in cited article)",
+      "publishedOn": "2026-11-01",
+      "sourceIds": ["cnn-atlanta"]
+    },
+    {
+      "id": "cleveland-shaker-reporting",
+      "type": "journalistic-report",
+      "status": "reporting-primary-policy-not-verified",
+      "scope": "Cleveland.com coverage; underlying policy text was not verified in this source review",
+      "publishedOn": "2026-10",
+      "sourceIds": ["cleveland-shaker"]
+    },
+    {
+      "id": "password-exposure",
+      "type": "security-guidance",
+      "status": "primary-government-guidance",
+      "scope": "CISA guidance on shared default passwords",
+      "sourceIds": ["cisa-default-passwords"]
+    },
+    {
+      "id": "remote-access-safety",
+      "type": "security-guidance",
+      "status": "primary-government-guidance",
+      "scope": "CISA guidance on network segmentation",
+      "sourceIds": ["cisa-segmentation"]
+    },
+    {
+      "id": "subnet-mask-guidance",
+      "type": "technical-reference",
+      "status": "vendor-documentation",
+      "scope": "IP addressing and subnet masks",
+      "sourceIds": ["cisco-subnetting"]
+    },
+    {
+      "id": "network-segmentation",
+      "type": "technical-clarification",
+      "status": "editorial-correction",
+      "scope": "Network directionality depends on routing, filtering, exposed services, and configuration",
+      "sourceIds": ["cisa-segmentation"]
+    },
+    {
+      "id": "aperture-depth",
+      "type": "technical-reference",
+      "status": "manufacturer-documentation",
+      "scope": "Lens aperture, light, and depth of field",
+      "sourceIds": ["axis-image-quality"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "flock-privacy",
+      "title": "How Flock Protects and Manages Data",
+      "publisher": "Flock Safety",
+      "type": "vendor-publication",
+      "url": "https://www.flocksafety.com/trust/data-privacy",
+      "checkedOn": "2026-11-02"
+    },
+    {
+      "id": "flock-guardrails",
+      "title": "Flock guardrails address LPR privacy concerns and police transparency",
+      "publisher": "Flock Safety",
+      "type": "vendor-announcement",
+      "url": "https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency",
+      "checkedOn": "2026-11-02"
+    },
+    {
+      "id": "cnn-atlanta",
+      "title": "Flock cameras fuel privacy backlash in Atlanta",
+      "publisher": "CNN",
+      "type": "journalistic-report",
+      "publishedOn": "2026-11-01",
+      "url": "https://us.cnn.com/2026/11/01/us/flock-cameras-atlanta-privacy-backlash",
+      "checkedOn": "2026-11-02"
+    },
+    {
+      "id": "cleveland-shaker",
+      "title": "How Cleveland and Shaker Heights restrict Flock's disclosure of camera data",
+      "publisher": "Cleveland.com",
+      "type": "journalistic-report",
+      "publishedOn": "2026-10",
+      "url": "https://www.cleveland.com/metro/2026/10/how-cleveland-and-shaker-heights-restrict-flocks-disclosure-of-camera-data.html",
+      "checkedOn": "2026-11-02",
+      "verificationNote": "The article returned HTTP 403 in this review; details are conservatively attributed to the report and its underlying policy was not verified."
+    },
+    {
+      "id": "cisa-default-passwords",
+      "title": "Risks of Default Passwords on the Internet",
+      "publisher": "Cybersecurity and Infrastructure Security Agency",
+      "type": "government-guidance",
+      "url": "https://www.cisa.gov/news-events/alerts/2013/06/24/risks-default-passwords-internet",
+      "checkedOn": "2026-11-02"
+    },
+    {
+      "id": "cisa-segmentation",
+      "title": "Layering Network Security Through Segmentation",
+      "publisher": "Cybersecurity and Infrastructure Security Agency",
+      "type": "government-guidance",
+      "url": "https://www.cisa.gov/resources-tools/resources/layering-network-security-through-segmentation-infographic",
+      "checkedOn": "2026-11-02"
+    },
+    {
+      "id": "cisco-subnetting",
+      "title": "IP Addressing and Subnetting for New Users",
+      "publisher": "Cisco",
+      "type": "technical-reference",
+      "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+      "checkedOn": "2026-11-02"
+    },
+    {
+      "id": "axis-image-quality",
+      "title": "Troubleshooting guide for image quality",
+      "publisher": "Axis Communications",
+      "type": "manufacturer-documentation",
+      "url": "https://help.axis.com/en-us/troubleshooting-image-quality",
+      "checkedOn": "2026-11-02"
+    }
+  ]
+}
